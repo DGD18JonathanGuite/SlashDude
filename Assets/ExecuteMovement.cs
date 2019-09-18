@@ -41,52 +41,32 @@ public class ExecuteMovement : MonoBehaviour
         float xmove = 0;
         float ymove = 0;
 
-
-        //DASHING \/\/\/\/\/
+        //Get Dash Value
         if (PlayerStats.getInstance()._istakendash)
         {
-            if (PlayerStats.getInstance()._istakenjump)
-            {
-                if (PlayerStats.getInstance()._jumping)
-                {
-                    Debug.Log(chargenumber);
-                    xmove = (chargenumber / Mathf.Abs(chargenumber)) * 2 * dashspeed;
-                    ymove = -100;
-                    PlayerStats.getInstance()._candash = true;
-
-                }
-                else if (!PlayerStats.getInstance()._jumping)
-                {
-                    xmove = (chargenumber / Mathf.Abs(chargenumber)) * 50;
-                    PlayerStats.getInstance()._candash = false;
-                }
-            }
-            else
-            {
-                xmove = chargenumber * dashspeed;
-                PlayerStats.getInstance()._candash = true;
-                Debug.Log(xmove);
-            }
+            GetComponent<Rigidbody2D>().collisionDetectionMode = CollisionDetectionMode2D.Continuous;
+            xmove = PlayerDashCalculations.DashValue(chargenumber, dashspeed);
         }
         else
         {
             if (!PlayerStats.getInstance()._jumping)
-                xmove = (chargenumber / Mathf.Abs(chargenumber)) * 50;
+                xmove = chargenumber * 20;
             else
                 xmove = 0;
 
             PlayerStats.getInstance()._candash = false;
         }
-        //DASHING /\/\/\/\/\
 
 
-        //JUMPING
-        if (PlayerStats.getInstance()._istakenjump && !PlayerStats.getInstance()._jumping)
+
+        //Get Jump Value
+        if (PlayerStats.getInstance()._istakenjump)
         {
-            ymove = Mathf.Abs(chargenumber) * jumpheight/2;
-            //PlayerStats.getInstance()._jumping = true;
+            if (!PlayerStats.getInstance()._jumping)
+                ymove = Mathf.Abs(chargenumber) * jumpheight / 2;
+            else if (PlayerStats.getInstance()._istakendash && PlayerStats.getInstance()._jumping)
+                ymove = -100;
         }
-        //JUMPING
 
         StartCoroutine(Move(xmove, ymove));
     }
@@ -126,6 +106,7 @@ public class ExecuteMovement : MonoBehaviour
             GetComponent<Rigidbody2D>().velocity = Vector2.zero;
             GetComponent<Rigidbody2D>().gravityScale = Grav;            
         }
+        GetComponent<Rigidbody2D>().collisionDetectionMode = CollisionDetectionMode2D.Discrete;
     }
 
     private void OnCollisionEnter2D(Collision2D collision)

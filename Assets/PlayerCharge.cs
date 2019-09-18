@@ -8,6 +8,8 @@ public class PlayerCharge : MonoBehaviour
 
     bool chargeisset = false;
 
+    public int charge_1 = 1, charge_2 = 2, charge_3 = 5;
+
     int chargenumber = 0;
     int _chargenumber
     {
@@ -18,11 +20,11 @@ public class PlayerCharge : MonoBehaviour
         set
         {
             chargenumber = value;
-            if (value == 1 || value == -1)
+            if (Mathf.Abs(value) == charge_1)
                 EventManager.ChangePlayerSpriteAnimation(0);
-            else if (value == 2 || value == -2)
+            else if (Mathf.Abs(value) == charge_2)
                 EventManager.ChangePlayerSpriteAnimation(1);
-            else if (value == 5 || value == -5)
+            else if (Mathf.Abs(value) == charge_3)
                 EventManager.ChangePlayerSpriteAnimation(2);
             else if (value == 0)
                 EventManager.ChangePlayerSpriteAnimation(0);
@@ -33,9 +35,6 @@ public class PlayerCharge : MonoBehaviour
     {
         EventManager.CheckforItems += Check;
     }
-    //DEBUG
-    //EventManager.Movement += Charge;
-    //EventManager.Stop += StopCharging;
 
     private void OnDisable()
     {
@@ -94,15 +93,15 @@ public class PlayerCharge : MonoBehaviour
                 {
                     if (timer > 9)
                     {
-                        _chargenumber = 3;
+                        _chargenumber = charge_3;
                     }
                 }
                 else
-                    _chargenumber = 2;
+                    _chargenumber = charge_2;
             }
 
             else
-                _chargenumber = 1;
+                _chargenumber = charge_1;
         }
 
         if (isleft)
