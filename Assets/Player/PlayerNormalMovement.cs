@@ -39,8 +39,13 @@ public class PlayerNormalMovement : MonoBehaviour
         
         while (_keepmoving)
         {
-            //Debug.Log("Moving");
-            GetComponent<Rigidbody2D>().AddForce(new Vector2(GetComponent<PlayerMovement>().horizontalmov *2, 0));
+            //Debug.Log("Moving at: " + GetComponent<PlayerMovement>().horizontalmov * 2);
+
+            if(PlayerStats.getInstance()._jumping)
+                GetComponent<Rigidbody2D>().AddForce(new Vector2(GetComponent<PlayerMovement>().horizontalmov *10, 0));
+            else
+                GetComponent<Rigidbody2D>().AddForce(new Vector2(GetComponent<PlayerMovement>().horizontalmov * 2, 0));
+
             yield return new WaitForSeconds(0.01f);
 
             if (GetComponent<PlayerMovement>().horizontalmov == 0 && PlayerStats.getInstance()._isstopping)
@@ -54,10 +59,12 @@ public class PlayerNormalMovement : MonoBehaviour
     {
         bool condition;
         //Debug.Log("ReCalibrate");
-        if (PlayerStats.getInstance()._istakenjump)
-            condition = PlayerStats.getInstance()._jumping;
-        else
-            condition = PlayerStats.getInstance()._isstopping;
+        //if (PlayerStats.getInstance()._istakenjump)
+        //    condition = PlayerStats.getInstance()._jumping;
+        //else
+        //    condition = PlayerStats.getInstance()._isstopping;
+
+       condition = PlayerStats.getInstance()._isstopping;
 
 
         while (!condition)

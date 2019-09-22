@@ -5,6 +5,8 @@ using UnityEngine;
 [System.Serializable]
 public class PlayerStats
 {
+    public float _grav;
+
     public bool _jumping = false;
     public bool _candash = false;
 
@@ -25,9 +27,15 @@ public class PlayerStats
         {
             canattack = value;
             if (value)
+            {
                 EventManager.ChangePlayerSpriteAnimation(1);
+                EventManager.ChangeHitbox(1);
+            }
             else
+            {
                 EventManager.ChangePlayerSpriteAnimation(0);
+                EventManager.ChangeHitbox(0);
+            }
         }
     }
 
@@ -79,12 +87,12 @@ public class PlayerStats
     {
         if (_instance == null)
         {
-            _instance = new PlayerStats(false, false, false, false, false, false, false, false , false, false);
+            _instance = new PlayerStats(false, false, false, false, false, false, false, false , false, false, 0);
         }
         return _instance;        
     }
 
-    public PlayerStats(bool dash, bool jump, bool explosion, bool poison, bool jumping, bool canattack, bool candash, bool ismoving, bool ischarging, bool stopping)
+    public PlayerStats(bool dash, bool jump, bool explosion, bool poison, bool jumping, bool canattack, bool candash, bool ismoving, bool ischarging, bool stopping, float grav)
     {
         _istakendash = dash;
         _istakenjump = jump;
@@ -99,5 +107,7 @@ public class PlayerStats
         _ischarging = ischarging;
 
         _isstopping = stopping;
+
+        _grav = grav;
     }
 }

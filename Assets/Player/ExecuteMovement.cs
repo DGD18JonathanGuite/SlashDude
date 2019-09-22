@@ -6,18 +6,14 @@ public class ExecuteMovement : MonoBehaviour
 {
     bool _moveanalysis = false;
 
-    //public bool _dashistaken = false;
-    //public bool _jumpistaken = false;
-
     public float jumpheight = 0;
+    public float gravdamp = 0;
+    public float gravgain = 1;
     public int dashspeed = 0;
     
     private void OnEnable()
     {
         EventManager.CheckforItems += CheckItem;
-
-        //DEBUG
-        //EventManager.ExecuteMov += MoveAnalysis;
     }
 
     private void OnDisable()
@@ -37,11 +33,9 @@ public class ExecuteMovement : MonoBehaviour
 
     void MoveAnalysis(int chargenumber)
     {
-        //Debug.Log("MoveA");
         float xmove = 0;
         float ymove = 0;
 
-        //Get Dash Value
         if (PlayerStats.getInstance()._istakendash)
         {
             GetComponent<Rigidbody2D>().collisionDetectionMode = CollisionDetectionMode2D.Continuous;
@@ -63,18 +57,17 @@ public class ExecuteMovement : MonoBehaviour
         if (PlayerStats.getInstance()._istakenjump)
         {
             if (!PlayerStats.getInstance()._jumping)
-                ymove = Mathf.Abs(chargenumber) * jumpheight / 2;
+                ymove = jumpheight; //Mathf.Abs(chargenumber) * jumpheight / 2;
             else if (PlayerStats.getInstance()._istakendash && PlayerStats.getInstance()._jumping)
                 ymove = -100;
         }
 
-        StartCoroutine(Move(xmove, ymove));
+        StartCoroutine(Move(xmove, ymove, chargenumber));
     }
 
-    IEnumerator Move(float _xmove, float _ymove)
+    IEnumerator Move(float _xmove, float _ymove, int charge)
     {
         bool dashing = false;
-        float Grav = GetComponent<Rigidbody2D>().gravityScale;
 
         if (PlayerStats.getInstance()._candash)
         {
@@ -89,24 +82,71 @@ public class ExecuteMovement : MonoBehaviour
 
 
         Debug.Log("Xmove: " + _xmove + "YMove: " + _ymove);
+
+        if(!PlayerStats.getInstance()._jumping && PlayerStats.getInstance()._istakenjump)
+        {
+            StartCoroutine(PullDown(charge, _ymove));
+        }
+
         GetComponent<Rigidbody2D>().AddForce(new Vector2(_xmove, _ymove));
 
-        if(_ymove > 0)
-        PlayerStats.getInstance()._jumping = true;
+        if (_ymove > 0)
+        {
+            PlayerStats.getInstance()._jumping = true;
+        }
 
         yield return new WaitForSeconds(0.01f);
 
         if (PlayerStats.getInstance()._jumping)
-            PlayerStats.getInstance()._candash = true;
+        {
+            if (PlayerStats.getInstance()._istakendash)
+                PlayerStats.getInstance()._candash = true;
+            if (!PlayerStats.getInstance()._istakendash)
+                StartCoroutine(DownwardSlash());
+        }
+
 
         if (dashing)
         {
-            yield return new WaitForSeconds(0.04f);
+            yield return new WaitForSeconds(0.02f);
+            StartCoroutine(Slash());
+            yield return new WaitForSeconds(0.02f);
 
             GetComponent<Rigidbody2D>().velocity = Vector2.zero;
-            GetComponent<Rigidbody2D>().gravityScale = Grav;            
         }
+
         GetComponent<Rigidbody2D>().collisionDetectionMode = CollisionDetectionMode2D.Discrete;
+    }
+
+    IEnumerator Slash()
+    {        
+        PlayerStats.getInstance()._canattack = true;
+        yield return new WaitForSeconds(0.6f);
+        PlayerStats.getInstance()._canattack = false;
+        GetComponent<Rigidbody2D>().gravityScale = PlayerStats.getInstance()._grav;
+    }
+
+    IEnumerator DownwardSlash()
+    {
+        while (GetComponent<Rigidbody2D>().velocity.y > 0)
+            yield return new WaitForEndOfFrame();
+
+        PlayerStats.getInstance()._canattack = true;          
+    }
+
+    IEnumerator PullDown(int charge, float ymove)
+    {
+
+        float top = (gravdamp * Mathf.Abs(charge));
+
+        GetComponent<Rigidbody2D>().gravityScale -= top;
+
+        for (int i = 0; i < top/gravgain; i++)
+        {
+            GetComponent<Rigidbody2D>().gravityScale += gravgain;
+            yield return new WaitForSeconds(0.1f);
+        }
+        GetComponent<Rigidbody2D>().gravityScale = PlayerStats.getInstance()._grav;
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -115,10 +155,14 @@ public class ExecuteMovement : MonoBehaviour
         {
             PlayerStats.getInstance()._jumping = false;
 
-            if(PlayerStats.getInstance()._istakenjump)
-            PlayerStats.getInstance()._candash = false;
+            if (PlayerStats.getInstance()._istakenjump)
+            {
+                PlayerStats.getInstance()._candash = false;
+                PlayerStats.getInstance()._canattack = false;
+            }
 
-            GetComponent<Rigidbody2D>().velocity = Vector2.zero;
+            GetComponent<Rigidbody2D>().gravityScale = PlayerStats.getInstance()._grav;
+            GetComponent<Rigidbody2D>().velocity = Vector2.zero;            
         }
     }
 }

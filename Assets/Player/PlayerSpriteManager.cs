@@ -9,6 +9,13 @@ public class PlayerSpriteManager : MonoBehaviour
     private void OnEnable()
     {
         EventManager.ChangePlayerSpriteAnimation += ChangeSprite;
+        EventManager.Movement += ChangeRotation;
+    }
+
+    private void OnDisable()
+    {
+        EventManager.ChangePlayerSpriteAnimation -= ChangeSprite;
+        EventManager.Movement -= ChangeRotation;
     }
 
     void ChangeSprite(int i)
@@ -19,5 +26,13 @@ public class PlayerSpriteManager : MonoBehaviour
             GetComponent<SpriteRenderer>().sprite = Attack;
         if (i == 2)
             GetComponent<SpriteRenderer>().sprite = Run;
+    }
+
+    void ChangeRotation(bool isleft)
+    {
+        if (isleft)
+            transform.rotation = Quaternion.Euler(new Vector2(0, -180));
+        if (!isleft)
+            transform.rotation = Quaternion.Euler(new Vector2(0, 0));
     }
 }
