@@ -10,7 +10,13 @@ public class PlayerAttack : MonoBehaviour
     {
         if (collision.gameObject.tag == "PlayerAttack" && PlayerStats.getInstance()._canattack)
         {
+            if(gameObject.tag == "Enemy")
             EnemyDeath();
+
+            if(gameObject.tag == "Boss")
+            {
+
+            }
         }
     }
 

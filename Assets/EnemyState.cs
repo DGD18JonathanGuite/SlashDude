@@ -43,4 +43,46 @@ public class EnemyState : MonoBehaviour
             }
         }
     }
+
+    public int _directionmodifier = 1;
+    bool facingleft = false;
+    public bool _facingleft
+    {
+        get
+        {
+            return facingleft;
+        }
+
+        set
+        {
+            facingleft = value;
+            if(value)
+            {
+                GetComponent<SpriteRenderer>().flipX = false;
+                transform.rotation = Quaternion.Euler(0, 0, 0);
+                _directionmodifier = 1;
+                
+            }
+            else
+            {
+                GetComponent<SpriteRenderer>().flipX = true;
+                transform.rotation = Quaternion.Euler(0, -180, 0);
+                _directionmodifier = -1;
+            }
+        }
+    }
+
+    int bosshealth = 0;
+    public int _bosshealth
+    {
+        get
+        {
+            return bosshealth;
+        }
+
+        set
+        {
+            bosshealth = value;
+        }
+    }
 }

@@ -14,10 +14,10 @@ public class EnemyRunner : MonoBehaviour
 
     private void Update()
     {
-        //if (Player.transform.position.x < transform.position.x && GetComponent<EnemyState>()._running)
-        //    transform.rotation = Quaternion.Euler(0, 0, 0);
-        //else if (Player.transform.position.x > transform.position.x && GetComponent<EnemyState>()._running)
-        //    transform.rotation = Quaternion.Euler(0, -180, 0);
+        if (Player.transform.position.x < transform.position.x && GetComponent<EnemyState>()._running)
+            GetComponent<EnemyState>()._facingleft = true;
+        else if (Player.transform.position.x > transform.position.x && GetComponent<EnemyState>()._running)
+            GetComponent<EnemyState>()._facingleft = false;
     }
 
     IEnumerator MoveToPlayer()
@@ -27,7 +27,7 @@ public class EnemyRunner : MonoBehaviour
         
         while (Vector2.Distance(transform.position, Player.transform.position) > 0.5f)
         {
-            transform.Translate(new Vector2((Player.transform.position.x - transform.position.x), 0).normalized/50);
+            transform.Translate(new Vector2((Player.transform.position.x - transform.position.x) * GetComponent<EnemyState>()._directionmodifier, 0).normalized/50);
             yield return new WaitForSeconds(0.01f);
         }
         GetComponent<EnemyState>()._running = false;
@@ -44,7 +44,7 @@ public class EnemyRunner : MonoBehaviour
         GetComponent<EnemyState>()._attacking = true;
         for(int i = 0; i < 20; i++)
         {
-            transform.Translate(attackmove);
+            transform.Translate(attackmove * GetComponent<EnemyState>()._directionmodifier);
             yield return new WaitForSeconds(0.01f);
         }
         GetComponent<EnemyState>()._attacking = false;
