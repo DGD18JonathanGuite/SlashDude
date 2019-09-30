@@ -9,6 +9,8 @@ TagManager:
   - Enemy
   - PlayerAttack
   - PoisonPool
+  - Boss
+  - Door
   layers:
   - Default
   - TransparentFX

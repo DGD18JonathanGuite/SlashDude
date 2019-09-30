@@ -8,7 +8,7 @@ public class InputManager : MonoBehaviour
     //DEBUG
     private void Start()
     {
-        Debug.Log(PlayerStats.getInstance()._istakendash);
+        //Debug.Log(PlayerStats.getInstance()._istakendash);
     }
 
     void Update()

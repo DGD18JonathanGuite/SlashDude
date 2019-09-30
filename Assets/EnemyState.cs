@@ -56,12 +56,12 @@ public class EnemyState : MonoBehaviour
         set
         {
             facingleft = value;
-            if(value)
+            if (value)
             {
                 GetComponent<SpriteRenderer>().flipX = false;
                 transform.rotation = Quaternion.Euler(0, 0, 0);
                 _directionmodifier = 1;
-                
+
             }
             else
             {
@@ -85,4 +85,23 @@ public class EnemyState : MonoBehaviour
             bosshealth = value;
         }
     }
+
+    int bossstate = 0;
+    public int _bossstate
+    {
+        get
+        {
+            return bossstate;
+        }
+
+        set
+        {
+            bossstate = value;
+        }
+    }
+    //Boss States
+    //0 >> normal
+    //1 >> one type is dead
+    //2 >> another type is dead
+    //3 >> both types are dead
 }

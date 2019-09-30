@@ -5,6 +5,7 @@ using UnityEngine;
 public class EnemyRunner : MonoBehaviour
 {
     GameObject Player;
+    public float movespeeddamp = 50;
     
     void Start()
     {
@@ -27,7 +28,7 @@ public class EnemyRunner : MonoBehaviour
         
         while (Vector2.Distance(transform.position, Player.transform.position) > 0.5f)
         {
-            transform.Translate(new Vector2((Player.transform.position.x - transform.position.x) * GetComponent<EnemyState>()._directionmodifier, 0).normalized/50);
+            transform.Translate(new Vector2((Player.transform.position.x - transform.position.x) * GetComponent<EnemyState>()._directionmodifier, 0).normalized/movespeeddamp);
             yield return new WaitForSeconds(0.01f);
         }
         GetComponent<EnemyState>()._running = false;

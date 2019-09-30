@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &5208232516666370992
+--- !u!1 &8943087428303015360
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,101 +8,43 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 5208232516666370993}
-  - component: {fileID: 5208232516666370998}
+  - component: {fileID: 8943087428303015364}
+  - component: {fileID: 8943087428303015365}
+  - component: {fileID: 8943087428303015362}
+  - component: {fileID: 8943087428303015363}
+  - component: {fileID: 8943087428303015367}
+  - component: {fileID: 8943087428303015369}
+  - component: {fileID: 8943087428303015368}
+  - component: {fileID: 8943087428303015371}
+  - component: {fileID: 8943087428303015361}
   m_Layer: 0
-  m_Name: RunnerAttack
-  m_TagString: Untagged
+  m_Name: Jumper Boss
+  m_TagString: Boss
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &5208232516666370993
+--- !u!4 &8943087428303015364
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5208232516666370992}
+  m_GameObject: {fileID: 8943087428303015360}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.146, y: 0.014, z: 0}
-  m_LocalScale: {x: 0.13853, y: 0.13853, z: 0.13853}
+  m_LocalPosition: {x: 1.779, y: 0.392, z: 0}
+  m_LocalScale: {x: 3.6955297, y: 3.6955297, z: 3.6955297}
   m_Children: []
-  m_Father: {fileID: 5208232516891131551}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!61 &5208232516666370998
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5208232516666370992}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1}
-  m_EdgeRadius: 0
---- !u!1 &5208232516891131547
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 5208232516891131551}
-  - component: {fileID: 5208232516891131550}
-  - component: {fileID: 5208232516891131545}
-  - component: {fileID: 5208232516891131544}
-  - component: {fileID: 5208232516891131548}
-  - component: {fileID: 5208232516891131549}
-  - component: {fileID: 5208232516891131538}
-  - component: {fileID: 5208232516891131539}
-  - component: {fileID: 5208232516891131536}
-  m_Layer: 0
-  m_Name: Runner Enemy
-  m_TagString: Enemy
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &5208232516891131551
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5208232516891131547}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.2, y: 0.2, z: 0}
-  m_LocalScale: {x: 1.656, y: 1.656, z: 1.656}
-  m_Children:
-  - {fileID: 5208232516666370993}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!212 &5208232516891131550
+--- !u!212 &8943087428303015365
 SpriteRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5208232516891131547}
+  m_GameObject: {fileID: 8943087428303015360}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -144,13 +86,13 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!61 &5208232516891131545
+--- !u!61 &8943087428303015362
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5208232516891131547}
+  m_GameObject: {fileID: 8943087428303015360}
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
@@ -170,14 +112,14 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.16, y: 0.16}
   m_EdgeRadius: 0
---- !u!50 &5208232516891131544
+--- !u!50 &8943087428303015363
 Rigidbody2D:
   serializedVersion: 4
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5208232516891131547}
+  m_GameObject: {fileID: 8943087428303015360}
   m_BodyType: 1
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
@@ -185,19 +127,19 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 0
+  m_GravityScale: 1
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 0
---- !u!114 &5208232516891131548
+--- !u!114 &8943087428303015367
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5208232516891131547}
+  m_GameObject: {fileID: 8943087428303015360}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 22661689fd4c7834cb0fc712baab28f9, type: 3}
@@ -205,26 +147,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ParticleDeath: {fileID: 354533789806495552, guid: f6d200c49b64c224e80a0d0ce52ef76c,
     type: 3}
---- !u!114 &5208232516891131549
+--- !u!114 &8943087428303015369
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5208232516891131547}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 248a7cd3e73241e43aabdf21c0754646, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  movespeeddamp: 80
---- !u!114 &5208232516891131538
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5208232516891131547}
+  m_GameObject: {fileID: 8943087428303015360}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9bbd07cd70ebd4f4b9cbe27f8e472896, type: 3}
@@ -233,28 +162,46 @@ MonoBehaviour:
   Running: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
   Attacking: {fileID: 10915, guid: 0000000000000000f000000000000000, type: 0}
   Idle: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
---- !u!114 &5208232516891131539
+--- !u!114 &8943087428303015368
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5208232516891131547}
+  m_GameObject: {fileID: 8943087428303015360}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 45a2825a5925ed944afcc2131b5bd0e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _directionmodifier: 1
---- !u!114 &5208232516891131536
+--- !u!114 &8943087428303015371
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5208232516891131547}
+  m_GameObject: {fileID: 8943087428303015360}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3fe47ccb817b86241b75932c9fee5f8a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &8943087428303015361
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8943087428303015360}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a508a88b7bbc48844a555cfb05dfb317, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PoisonPool: {fileID: 4737473753317427239, guid: 13b81c77a6678c6438d396a0a03b2cab,
+    type: 3}
+  forcex: 200
+  forcey: 300
+  HopDirection: {x: 0, y: 0}
+  BossJumpIsRunning: 0

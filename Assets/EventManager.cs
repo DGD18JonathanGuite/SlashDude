@@ -17,5 +17,7 @@ public class EventManager
 
     public static System.Action<int> ChangeHitbox;
 
-    public static System.Action<int> EnemySpawn;
+    public static System.Action EnemySpawn;
+
+    public static System.Action PlayerIsHit;
 }

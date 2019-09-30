@@ -53,7 +53,7 @@ public class FlyerEnemy : MonoBehaviour
     {
         Stop();
         Debug.Log("Hor");
-        GetComponent<Rigidbody2D>().AddForce(new Vector2((AttackForce) * GetComponent<EnemyState>()._directionmodifier, 0).normalized * 200);
+        GetComponent<Rigidbody2D>().AddForce(new Vector2(AttackForce * GetComponent<EnemyState>()._directionmodifier, 0).normalized * 200);
     }
 
     IEnumerator FlyUp(float direction)
