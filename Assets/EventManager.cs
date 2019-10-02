@@ -20,4 +20,10 @@ public class EventManager
     public static System.Action EnemySpawn;
 
     public static System.Action PlayerIsHit;
+
+    public static System.Action ChangeLevel;
+
+    public static System.Action EnemyisDead;
+
+    public static System.Action OpenDoors;
 }

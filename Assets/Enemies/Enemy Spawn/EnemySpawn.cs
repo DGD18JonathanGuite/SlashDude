@@ -19,41 +19,77 @@ public class EnemySpawn : MonoBehaviour
 
     private void Start()
     {
-        //StartCoroutine(SpawnRunner());
+        StartCoroutine(Spawn());
     }
 
-    IEnumerator SpawnRunner()
+    IEnumerator Spawn()
     {
-        int spawnpointindex = Random.Range(0, 2);
-        while (gameObject)
+        yield return new WaitForSeconds(0.1f);
+
+
+        SpawnEnemyClass[][] spawn;
+        int levelindex;
+        levelindex = GameObject.Find("GameManager").GetComponent<GameManager>()._levelnumber;
+
+        spawn = GetComponent<Level1ASpawn>().Lvl1ASpawns;
+
+        if (levelindex == 0)
+           spawn = GetComponent<Level1ASpawn>().Lvl1ASpawns;
+        if (levelindex == 1)
+            spawn = GetComponent<Level2ASpawn>().Lvl1ASpawns;
+        if (levelindex == 2)
+            spawn = GetComponent<Level3ASpawn>().Lvl1ASpawns;
+
+        foreach (SpawnEnemyClass _item in spawn[Random.Range(0,spawn.Length)])
         {
-            yield return new WaitForSeconds(rate);
-            Instantiate(Runner, RunnerSpawnPoints[spawnpointindex].transform.position, Quaternion.identity);
-            spawnpointindex = Random.Range(0, 2);
+            yield return new WaitForSeconds(_item.timing);
+            Instantiate(_item.Enemy, _item.SpawnPoint.transform.position, Quaternion.identity);
         }
+
+        Debug.Log("SpawnFinished");
     }
 
-    IEnumerator SpawnJumper()
-    {
-        int spawnpointindex = Random.Range(0, 2);
-        while (gameObject)
-        {
-            yield return new WaitForSeconds(rate);
-            Instantiate(Jumper, RunnerSpawnPoints[spawnpointindex].transform.position, Quaternion.identity);
-            spawnpointindex = Random.Range(0, 2);
-        }
-    }
 
-    IEnumerator SpawnFlyer()
-    {
-        int spawnpointindex = Random.Range(0, 2);
-        while (gameObject)
-        {
-            yield return new WaitForSeconds(rate);
-            Instantiate(Flyer, FlyerSpawnPoints[spawnpointindex].transform.position, Quaternion.identity);
-            spawnpointindex = Random.Range(0, 2);
-        }
-    }
+
+    //IEnumerator SpawnRunner()
+    //{
+    //    int spawnpointindex = Random.Range(0, 2);
+    //    while (gameObject)
+    //    {
+    //        yield return new WaitForSeconds(rate);
+    //        Instantiate(Runner, RunnerSpawnPoints[spawnpointindex].transform.position, Quaternion.identity);
+    //        spawnpointindex = Random.Range(0, 2);
+    //    }
+    //}
+
+    //IEnumerator SpawnJumper()
+    //{
+    //    int spawnpointindex = Random.Range(0, 2);
+    //    while (gameObject)
+    //    {
+    //        yield return new WaitForSeconds(rate);
+    //        Instantiate(Jumper, RunnerSpawnPoints[spawnpointindex].transform.position, Quaternion.identity);
+    //        spawnpointindex = Random.Range(0, 2);
+    //    }
+    //}
+
+    //IEnumerator SpawnFlyer()
+    //{
+    //    int spawnpointindex = Random.Range(0, 2);
+    //    while (gameObject)
+    //    {
+    //        yield return new WaitForSeconds(rate);
+    //        Instantiate(Flyer, FlyerSpawnPoints[spawnpointindex].transform.position, Quaternion.identity);
+    //        spawnpointindex = Random.Range(0, 2);
+    //    }
+    //}
+
+
+
+
+
+
+
 
 
 

@@ -18,6 +18,11 @@ public class HitboxState : MonoBehaviour
         EventManager.ChangeHitbox += ChangeAttackHitbox;
     }
 
+    private void OnDisable()
+    {
+        EventManager.ChangeHitbox -= ChangeAttackHitbox;
+    }
+
     void ChangeAttackHitbox(int state)
     {
         if (state == 0)

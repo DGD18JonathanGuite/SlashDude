@@ -30,6 +30,8 @@ public class PlayerAttack : MonoBehaviour
 
     public void EnemyDeath()
     {
+        EventManager.EnemyisDead();
+
         ParticleSystem PDeath = Instantiate(ParticleDeath, transform.position, Quaternion.Euler(GameObject.Find("Player").transform.rotation.eulerAngles + new Vector3(0,90,0)));
         Destroy(gameObject);
     }

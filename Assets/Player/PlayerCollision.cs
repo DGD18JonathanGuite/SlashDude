@@ -27,16 +27,6 @@ public class PlayerCollision : MonoBehaviour
             Physics2D.IgnoreCollision(item.GetComponent<Collider2D>(), GetComponent<BoxCollider2D>());
     }
 
-    public bool _playerisburning = false;    
-
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.gameObject.tag == "PoisonPool" && !_playerisburning)
-        {
-            _playerisburning = true;
-            StartCoroutine(PlayerIsBurning());
-        }
-    }
 
     IEnumerator PlayerIsBurning()
     {
@@ -65,6 +55,23 @@ public class PlayerCollision : MonoBehaviour
             }
         }
         GetComponent<SpriteRenderer>().color = new Color32(255, 255, 255, 255);
+    }
+
+
+    public bool _playerisburning = false;
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "PoisonPool" && !_playerisburning)
+        {
+            _playerisburning = true;
+            StartCoroutine(PlayerIsBurning());
+        }
+
+        if(collision.gameObject.tag == "Door")
+        {
+            EventManager.ChangeLevel();
+        }
     }
 
     private void OnTriggerExit2D(Collider2D collision)

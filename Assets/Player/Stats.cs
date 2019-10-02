@@ -18,6 +18,11 @@ public class Stats : MonoBehaviour
         EventManager.UpdateStats += UpdateStat;
     }
 
+    private void OnDisable()
+    {
+        EventManager.UpdateStats -= UpdateStat;
+    }
+
     void UpdateStat(int i)
     {
         Status = PlayerStats.getInstance();

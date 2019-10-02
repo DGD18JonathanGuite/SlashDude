@@ -19,6 +19,7 @@ public class ExecuteMovement : MonoBehaviour
     private void OnDisable()
     {
         EventManager.CheckforItems -= CheckItem;
+        EventManager.ExecuteMov -= MoveAnalysis;
     }
 
     void CheckItem(int code)

@@ -28,6 +28,8 @@ public class PlayerMovement : MonoBehaviour
     {
         EventManager.Movement -= GetComponent<PlayerNormalMovement>().Movement;
         EventManager.Stop -= GetComponent<PlayerNormalMovement>().Stop;
+
+        EventManager.CheckforItems -= CheckforDisable;
     }
 
     void CheckforDisable(int i)
