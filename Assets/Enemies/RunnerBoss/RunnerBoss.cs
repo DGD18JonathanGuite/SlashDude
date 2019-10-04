@@ -84,7 +84,6 @@ public class RunnerBoss : MonoBehaviour
     {
         float time = 1;
 
-
         again:
         for(int i = 5; i > 0; i--)
         {
@@ -121,13 +120,12 @@ public class RunnerBoss : MonoBehaviour
         yield return new WaitForSeconds(0.2f);
         Instantiate(Explosion, ExplosionNode.transform.position, Quaternion.identity);
         _EnemyState._attacking = false;
-
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.tag == "Enemy") //&& _EnemyState._attacking)
-            Absorption(collision.gameObject);            
+            Absorption(collision.gameObject);
     }
 
     void Absorption(GameObject absorbed)

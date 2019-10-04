@@ -13,7 +13,7 @@ public class EventManager
 
     public static System.Action<int> ExecuteMov;
 
-    public static System.Action<int> UpdateStats;
+    public static System.Action UpdateStats;
 
     public static System.Action<int> ChangeHitbox;
 

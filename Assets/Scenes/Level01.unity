@@ -1004,6 +1004,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c1c30e6688c0f8841b307f1a7194de2b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PlayerHurt: {fileID: 146415898294959355, guid: 24b2a3fda38226b4592b7e30c9153f73,
+    type: 3}
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
@@ -1467,9 +1469,33 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 787afce2170ad05438c3298224450dc3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawn1: []
-  spawn2: []
-  spawn3: []
+  spawn1:
+  - timing: 0
+    Enemy: {fileID: 9121534340414073874, guid: 6170d2b95ee2d364ca1acf731ced51c8, type: 3}
+    SpawnPoint: {fileID: 173922921}
+  - timing: 0
+    Enemy: {fileID: 9121534340414073874, guid: 6170d2b95ee2d364ca1acf731ced51c8, type: 3}
+    SpawnPoint: {fileID: 173922921}
+  - timing: 0
+    Enemy: {fileID: 9121534340414073874, guid: 6170d2b95ee2d364ca1acf731ced51c8, type: 3}
+    SpawnPoint: {fileID: 173922921}
+  - timing: 0
+    Enemy: {fileID: 9121534340414073874, guid: 6170d2b95ee2d364ca1acf731ced51c8, type: 3}
+    SpawnPoint: {fileID: 173922921}
+  - timing: 0
+    Enemy: {fileID: 9121534340414073874, guid: 6170d2b95ee2d364ca1acf731ced51c8, type: 3}
+    SpawnPoint: {fileID: 173922921}
+  spawn2:
+  - timing: 0
+    Enemy: {fileID: 5208232516891131547, guid: 4bd0cbd104212e042a000bdd2828e834, type: 3}
+    SpawnPoint: {fileID: 4377886}
+  spawn3:
+  - timing: 0
+    Enemy: {fileID: 5208232516891131547, guid: 4bd0cbd104212e042a000bdd2828e834, type: 3}
+    SpawnPoint: {fileID: 173922921}
+  - timing: 1
+    Enemy: {fileID: 9121534340414073874, guid: 6170d2b95ee2d364ca1acf731ced51c8, type: 3}
+    SpawnPoint: {fileID: 4377886}
 --- !u!114 &1587553646
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1735,6 +1761,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6fa0356ee157764fa71f1063617b3f2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Stats: {fileID: 0}
   _levelnumber: 0
 --- !u!114 &1948973126
 MonoBehaviour:

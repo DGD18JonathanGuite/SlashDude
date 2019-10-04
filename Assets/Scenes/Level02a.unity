@@ -300,7 +300,7 @@ GameObject:
   - component: {fileID: 381338866}
   m_Layer: 0
   m_Name: LDoor
-  m_TagString: Untagged
+  m_TagString: Door
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -383,7 +383,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.27450982}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -402,6 +402,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 540622405}
+  - component: {fileID: 540622406}
   m_Layer: 0
   m_Name: Level
   m_TagString: Untagged
@@ -429,6 +430,22 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &540622406
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 540622404}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ca96b266342c0dd4a88bfb018d5a1b9c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  LeftDoor: {fileID: 1042093707}
+  RightDoor: {fileID: 643755300}
+  LeftDoorHalf: {fileID: 18723376}
+  RightdDoorHalf: {fileID: 2137566291}
 --- !u!1 &637050586
 GameObject:
   m_ObjectHideFlags: 0
@@ -1175,58 +1192,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Player: {fileID: 699266462}
---- !u!1 &1041584113
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1041584115}
-  - component: {fileID: 1041584114}
-  m_Layer: 0
-  m_Name: Stats
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1041584114
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1041584113}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 81647615dd91f5c4e87c2278b65c02d3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Grav: 1
-  Status:
-    _grav: 0
-    _jumping: 0
-    _candash: 0
-    _ismoving: 0
-    _ischarging: 0
-    _istakenexplosion: 0
-    _istakenpoison: 0
---- !u!4 &1041584115
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1041584113}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 227.18079, y: 184.44499, z: -316.86887}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 5
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1042093707
 GameObject:
   m_ObjectHideFlags: 0
@@ -1394,7 +1359,7 @@ Transform:
   - {fileID: 4377887}
   - {fileID: 2102518731}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1587553644
 MonoBehaviour:
@@ -1412,14 +1377,20 @@ MonoBehaviour:
   - timing: 1
     Enemy: {fileID: 5208232516891131547, guid: 4bd0cbd104212e042a000bdd2828e834, type: 3}
     SpawnPoint: {fileID: 173922921}
-  - timing: 4
+  - timing: 1
     Enemy: {fileID: 5208232516891131547, guid: 4bd0cbd104212e042a000bdd2828e834, type: 3}
     SpawnPoint: {fileID: 173922921}
-  - timing: 2
+  - timing: 1
     Enemy: {fileID: 5208232516891131547, guid: 4bd0cbd104212e042a000bdd2828e834, type: 3}
     SpawnPoint: {fileID: 4377886}
+  - timing: 1
+    Enemy: {fileID: 5208232516891131547, guid: 4bd0cbd104212e042a000bdd2828e834, type: 3}
+    SpawnPoint: {fileID: 4377886}
+  - timing: 1
+    Enemy: {fileID: 5208232516891131547, guid: 4bd0cbd104212e042a000bdd2828e834, type: 3}
+    SpawnPoint: {fileID: 173922921}
   spawn2:
-  - timing: 4
+  - timing: 1
     Enemy: {fileID: 5208232516891131547, guid: 4bd0cbd104212e042a000bdd2828e834, type: 3}
     SpawnPoint: {fileID: 173922921}
   - timing: 1
@@ -1432,12 +1403,6 @@ MonoBehaviour:
   - timing: 1
     Enemy: {fileID: 5208232516891131547, guid: 4bd0cbd104212e042a000bdd2828e834, type: 3}
     SpawnPoint: {fileID: 4377886}
-  - timing: 1
-    Enemy: {fileID: 5208232516891131547, guid: 4bd0cbd104212e042a000bdd2828e834, type: 3}
-    SpawnPoint: {fileID: 173922921}
-  - timing: 1
-    Enemy: {fileID: 9121534340414073874, guid: 6170d2b95ee2d364ca1acf731ced51c8, type: 3}
-    SpawnPoint: {fileID: 173922921}
 --- !u!114 &1587553645
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1454,32 +1419,17 @@ MonoBehaviour:
   - timing: 1
     Enemy: {fileID: 9121534340414073874, guid: 6170d2b95ee2d364ca1acf731ced51c8, type: 3}
     SpawnPoint: {fileID: 173922921}
-  - timing: 1
-    Enemy: {fileID: 9121534340414073874, guid: 6170d2b95ee2d364ca1acf731ced51c8, type: 3}
-    SpawnPoint: {fileID: 4377886}
-  - timing: 1
-    Enemy: {fileID: 9121534340414073874, guid: 6170d2b95ee2d364ca1acf731ced51c8, type: 3}
-    SpawnPoint: {fileID: 173922921}
   spawn2:
   - timing: 1
     Enemy: {fileID: 5208232516891131547, guid: 4bd0cbd104212e042a000bdd2828e834, type: 3}
+    SpawnPoint: {fileID: 4377886}
+  spawn3:
+  - timing: 1
+    Enemy: {fileID: 5208232516891131547, guid: 4bd0cbd104212e042a000bdd2828e834, type: 3}
     SpawnPoint: {fileID: 173922921}
   - timing: 1
     Enemy: {fileID: 9121534340414073874, guid: 6170d2b95ee2d364ca1acf731ced51c8, type: 3}
     SpawnPoint: {fileID: 4377886}
-  - timing: 1
-    Enemy: {fileID: 5208232516891131547, guid: 4bd0cbd104212e042a000bdd2828e834, type: 3}
-    SpawnPoint: {fileID: 173922921}
-  spawn3:
-  - timing: 1
-    Enemy: {fileID: 8943087428303015360, guid: 5f7ff596b52e7d64a8a37a49495c679f, type: 3}
-    SpawnPoint: {fileID: 173922921}
-  - timing: 1
-    Enemy: {fileID: 5208232516891131547, guid: 4bd0cbd104212e042a000bdd2828e834, type: 3}
-    SpawnPoint: {fileID: 4377886}
-  - timing: 1
-    Enemy: {fileID: 8943087428303015360, guid: 5f7ff596b52e7d64a8a37a49495c679f, type: 3}
-    SpawnPoint: {fileID: 173922921}
 --- !u!114 &1587553646
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1711,6 +1661,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1948973124}
   - component: {fileID: 1948973125}
+  - component: {fileID: 1948973126}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -1744,7 +1695,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6fa0356ee157764fa71f1063617b3f2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Stats: {fileID: 0}
   _levelnumber: 0
+--- !u!114 &1948973126
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1948973123}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c9137c7f3644e4f44aff29ca442b1eae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2088263229
 GameObject:
   m_ObjectHideFlags: 0
@@ -1758,7 +1722,7 @@ GameObject:
   - component: {fileID: 2088263231}
   m_Layer: 0
   m_Name: RDoor
-  m_TagString: Untagged
+  m_TagString: Door
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1841,7 +1805,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.27450982}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0

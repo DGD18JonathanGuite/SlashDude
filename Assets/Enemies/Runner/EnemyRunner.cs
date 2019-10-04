@@ -56,4 +56,10 @@ public class EnemyRunner : MonoBehaviour
         else
             goto again;
     }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "Player" && GetComponent<EnemyState>()._attacking)
+            EventManager.PlayerIsHit();
+    }
 }

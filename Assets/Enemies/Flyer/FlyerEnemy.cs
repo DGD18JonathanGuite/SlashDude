@@ -10,6 +10,8 @@ public class FlyerEnemy : MonoBehaviour
     public float airheight;
     public float AttackForce;
 
+    public int slidelength = 50;
+
     void Start()
     {
         Player = GameObject.Find("Player");
@@ -19,9 +21,10 @@ public class FlyerEnemy : MonoBehaviour
     IEnumerator Fly()
     {
         int count = Random.Range(3, 5);
-        int[] direction = new int[] { -1, 1 };
+        int[] direction = new int[] {-1,1};
 
         GetComponent<EnemyState>()._running = true;
+
         while(count>0)
         {
             Move(direction[Random.Range(0, 2)]);
@@ -31,6 +34,9 @@ public class FlyerEnemy : MonoBehaviour
         }
 
         GetComponent<EnemyState>()._running = false;
+        Stop();
+        yield return new WaitForSeconds(1f);
+
         AttackDownwards();
     }
 
@@ -53,8 +59,25 @@ public class FlyerEnemy : MonoBehaviour
     {
         Stop();
         Debug.Log("Hor");
-        GetComponent<Rigidbody2D>().AddForce(new Vector2(AttackForce * GetComponent<EnemyState>()._directionmodifier, 0).normalized * 200);
+        StartCoroutine(Slide());
     }
+
+    IEnumerator Slide()
+    {
+        int count = 0;
+
+        while (count < slidelength)
+        {
+            transform.Translate(new Vector3(0.7f * GetComponent<EnemyState>()._directionmodifier / slidelength, 0));
+            yield return new WaitForSeconds(0.01f);
+            count++;
+        }
+
+        GetComponent<EnemyState>()._attacking = false;
+        yield return new WaitForSeconds(1f);
+        StartCoroutine(FlyUp(0));
+    }
+
 
     IEnumerator FlyUp(float direction)
     {
@@ -87,19 +110,23 @@ public class FlyerEnemy : MonoBehaviour
             AttackHorizontal();
         }
 
+        if(collision.gameObject.tag == "Player" && GetComponent<EnemyState>()._attacking)
+        {
+            EventManager.PlayerIsHit();
+        }
+
         if (collision.gameObject.tag == "Wall")
         {
             float direction = transform.position.x - collision.transform.position.x;
 
-            if (GetComponent<EnemyState>()._attacking)
-            {
-                GetComponent<EnemyState>()._attacking = false;
-                StartCoroutine(FlyUp(direction / Mathf.Abs(direction)));
-            }
-
             if(GetComponent<EnemyState>()._running)
             {
                 Move(direction / Mathf.Abs(direction));
+            }
+            else
+            {
+                GetComponent<EnemyState>()._attacking = false;
+                StartCoroutine(FlyUp(direction / Mathf.Abs(direction)));
             }
         }
     }

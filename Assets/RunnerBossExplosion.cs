@@ -13,7 +13,13 @@ public class RunnerBossExplosion : MonoBehaviour
     // Update is called once per frame
     IEnumerator LifeTime()
     {
-        yield return new WaitForSeconds(0.3f);
+        yield return new WaitForSeconds(0.2f);
         Destroy(gameObject);
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "Player")
+            EventManager.PlayerIsHit();
     }
 }

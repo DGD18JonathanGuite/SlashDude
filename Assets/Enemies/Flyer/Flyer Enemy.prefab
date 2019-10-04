@@ -199,6 +199,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 007c7fafc8fc4ab45895e5002a6e6a3c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  forcex: 100
+  forcex: 75
   forcey: 200
   airheight: 1
+  AttackForce: 0
+  slidelength: 50

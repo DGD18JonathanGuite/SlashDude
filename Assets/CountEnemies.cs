@@ -16,7 +16,7 @@ public class CountEnemies : MonoBehaviour
 
     void enemycount()
     {
-        Debug.Log("No. of existing enemies " + GameObject.FindGameObjectsWithTag("Enemy").Length);
+        //Debug.Log("No. of existing enemies " + GameObject.FindGameObjectsWithTag("Enemy").Length);
 
         StartCoroutine(_enemycount());
     }
@@ -25,7 +25,7 @@ public class CountEnemies : MonoBehaviour
     {
         yield return new WaitForSeconds(1);
 
-        if (GameObject.FindGameObjectsWithTag("Enemy").Length == 0)
+        if (GameObject.FindGameObjectsWithTag("Enemy").Length == 0 && GameObject.FindGameObjectsWithTag("Boss").Length == 0)
             EventManager.OpenDoors();
     }
 }
