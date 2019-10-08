@@ -33,6 +33,8 @@ public class InputManager : MonoBehaviour
         {
             PlayerStats.getInstance()._istakenjump = true;
             EventManager.CheckforItems(1);
+
+            Debug.Log("Random [0,3] = " + Random.Range(0, 3));
         }
     }
 }

@@ -26,4 +26,6 @@ public class EventManager
     public static System.Action EnemyisDead;
 
     public static System.Action OpenDoors;
+
+    public static System.Action PlayerisDead;
 }

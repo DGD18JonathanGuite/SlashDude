@@ -7,10 +7,15 @@ public class Stats : MonoBehaviour
     public float Grav;
     public PlayerStats Status;
 
+    public bool[] LevelsFinished;
+    public bool leftdoor;
+
+    public int spawnnumber;
+
     private void OnEnable()
     {
         EventManager.UpdateStats += UpdateStat;
-        EventManager.ChangeLevel += ResetStat;
+        EventManager.ChangeLevel += ResetStat;        
     }
     
 
@@ -33,6 +38,20 @@ public class Stats : MonoBehaviour
 
     void ResetStat()
     {
+        PlayerStats.getInstance()._ischarging = false;
+        PlayerStats.getInstance()._ismoving = false;
+        PlayerStats.getInstance()._jumping = false;
+    }
+
+    public void RestartGameStats()
+    {
+        for(int i = 0; i < LevelsFinished.Length; i++)
+        {
+            LevelsFinished[i] = false;
+        }
+
+        PlayerStats.getInstance()._playerhealth = 3;        
+
         PlayerStats.getInstance()._ischarging = false;
         PlayerStats.getInstance()._ismoving = false;
         PlayerStats.getInstance()._jumping = false;

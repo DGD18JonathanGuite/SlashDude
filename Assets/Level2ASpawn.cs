@@ -7,11 +7,12 @@ public class Level2ASpawn : MonoBehaviour
     public SpawnEnemyClass[] spawn1;
     public SpawnEnemyClass[] spawn2;
     public SpawnEnemyClass[] spawn3;
+    public SpawnEnemyClass[] spawnboss;
 
-    public SpawnEnemyClass[][] Lvl1ASpawns;
+    public SpawnEnemyClass[][] LvlSpawns;
 
     private void Start()
     {
-        Lvl1ASpawns = new SpawnEnemyClass[][] { spawn1, spawn2, spawn3 };
+        LvlSpawns = new SpawnEnemyClass[][] { spawn1, spawn2, spawn3, spawnboss};
     }
 }

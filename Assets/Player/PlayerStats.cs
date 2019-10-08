@@ -16,6 +16,8 @@ public class PlayerStats
     public bool _istakenexplosion = false;
     public bool _istakenpoison = false;
 
+    public int _playerhealth;
+
     bool canattack = false;
     public bool _canattack
     {
@@ -87,12 +89,12 @@ public class PlayerStats
     {
         if (_instance == null)
         {
-            _instance = new PlayerStats(false, false, false, false, false, false, false, false , false, false, 0);
+            _instance = new PlayerStats(false, false, false, false, false, false, false, false , false, false, 0, 3);
         }
         return _instance;        
     }
 
-    public PlayerStats(bool dash, bool jump, bool explosion, bool poison, bool jumping, bool canattack, bool candash, bool ismoving, bool ischarging, bool stopping, float grav)
+    public PlayerStats(bool dash, bool jump, bool explosion, bool poison, bool jumping, bool canattack, bool candash, bool ismoving, bool ischarging, bool stopping, float grav, int health)
     {
         _istakendash = dash;
         _istakenjump = jump;
@@ -109,5 +111,7 @@ public class PlayerStats
         _isstopping = stopping;
 
         _grav = grav;
+
+        _playerhealth = health;
     }
 }

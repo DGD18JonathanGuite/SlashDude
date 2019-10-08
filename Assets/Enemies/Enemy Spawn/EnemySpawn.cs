@@ -31,16 +31,18 @@ public class EnemySpawn : MonoBehaviour
         int levelindex;
         levelindex = GameObject.Find("GameManager").GetComponent<GameManager>()._levelnumber;
 
-        spawn = GetComponent<Level1ASpawn>().Lvl1ASpawns;
+        int _spawnnumber = GameObject.Find("Stats").GetComponent<Stats>().spawnnumber;
+        spawn = GetComponent<Level1ASpawn>().LvlSpawns;
 
-        if (levelindex == 0)
-           spawn = GetComponent<Level1ASpawn>().Lvl1ASpawns;
-        if (levelindex == 1)
-            spawn = GetComponent<Level2ASpawn>().Lvl1ASpawns;
-        if (levelindex == 2)
-            spawn = GetComponent<Level3ASpawn>().Lvl1ASpawns;
 
-        foreach (SpawnEnemyClass _item in spawn[Random.Range(0,spawn.Length)])
+        if (_spawnnumber == 0)
+            spawn = GetComponent<Level1ASpawn>().LvlSpawns;
+        if (_spawnnumber == 1)
+            spawn = GetComponent<Level2ASpawn>().LvlSpawns;
+        if (_spawnnumber == 2)
+            spawn = GetComponent<Level3ASpawn>().LvlSpawns;
+
+        foreach (SpawnEnemyClass _item in spawn[levelindex])
         {
             yield return new WaitForSeconds(_item.timing);
             Instantiate(_item.Enemy, _item.SpawnPoint.transform.position, Quaternion.identity);

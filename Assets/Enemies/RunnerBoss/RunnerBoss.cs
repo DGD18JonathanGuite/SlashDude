@@ -55,8 +55,7 @@ public class RunnerBoss : MonoBehaviour
                 yield return new WaitForSeconds(0.2f);
             }
             yield return new WaitForSeconds(1.5f);
-        }
-        
+        }        
     }
 
     public void BossisHit()
@@ -70,7 +69,10 @@ public class RunnerBoss : MonoBehaviour
             _EnemyState._bosshealth--;
 
             if (_EnemyState._bosshealth <= 0)
+            {
+                EventManager.EnemyisDead();
                 Destroy(gameObject);
+            }
             else
             {
                 StopCoroutine(BossIdleAttack);
@@ -100,7 +102,10 @@ public class RunnerBoss : MonoBehaviour
                 goto again;
             }
             else
+            {
+                EventManager.EnemyisDead();
                 Destroy(gameObject);
+            }
         }
         else
         {

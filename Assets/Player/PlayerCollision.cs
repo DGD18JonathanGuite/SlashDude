@@ -12,11 +12,18 @@ public class PlayerCollision : MonoBehaviour
     private void OnEnable()
     {
         EventManager.EnemySpawn += IgnoreCollisions;
+        EventManager.PlayerisDead += PlayerDied;
     }
 
     private void OnDisable()
     {
         EventManager.EnemySpawn -= IgnoreCollisions;
+        EventManager.PlayerisDead -= PlayerDied;
+    }
+
+    void PlayerDied()
+    {
+
     }
 
     void IgnoreCollisions()
@@ -70,6 +77,24 @@ public class PlayerCollision : MonoBehaviour
 
         if(collision.gameObject.tag == "Door")
         {
+            if (GameObject.Find("GameManager").GetComponent<GameManager>()._levelnumber == 0)
+            {
+                if (collision.gameObject.name == "LDoor")
+                {
+                    GameObject.Find("Stats").GetComponent<Stats>().leftdoor = true;
+                    GameObject.Find("Stats").GetComponent<Stats>().spawnnumber = collision.GetComponent<DoorIndiv>().doorid;
+
+                    GameObject.Find("Stats").GetComponent<Stats>().LevelsFinished[collision.GetComponent<DoorIndiv>().doorid] = true;
+                }
+                else if (collision.gameObject.name == "RDoor")
+                {
+                    GameObject.Find("Stats").GetComponent<Stats>().leftdoor = false;
+                    GameObject.Find("Stats").GetComponent<Stats>().spawnnumber = collision.GetComponent<DoorIndiv>().doorid;
+
+                    GameObject.Find("Stats").GetComponent<Stats>().LevelsFinished[collision.GetComponent<DoorIndiv>().doorid] = true;
+                }
+            }
+
             EventManager.ChangeLevel();
         }
     }
