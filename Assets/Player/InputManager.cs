@@ -24,17 +24,17 @@ public class InputManager : MonoBehaviour
         //0 is dash
         //1 is jump
 
-        if (Input.GetKeyDown(KeyCode.Q))
-        {
-            PlayerStats.getInstance()._istakendash = true;
-            EventManager.CheckforItems(0);
-        }
-        if (Input.GetKeyDown(KeyCode.W))
-        {
-            PlayerStats.getInstance()._istakenjump = true;
-            EventManager.CheckforItems(1);
+        //if (Input.GetKeyDown(KeyCode.Q))
+        //{
+        //    PlayerStats.getInstance()._istakendash = true;
+        //    EventManager.CheckforItems(0);
+        //}
+        //if (Input.GetKeyDown(KeyCode.W))
+        //{
+        //    PlayerStats.getInstance()._istakenjump = true;
+        //    EventManager.CheckforItems(1);
 
-            Debug.Log("Random [0,3] = " + Random.Range(0, 3));
-        }
+        //    Debug.Log("Random [0,3] = " + Random.Range(0, 3));
+        //}
     }
 }

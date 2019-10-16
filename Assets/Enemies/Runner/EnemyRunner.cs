@@ -40,7 +40,9 @@ public class EnemyRunner : MonoBehaviour
         Vector2 attackmove = new Vector2((Player.transform.position.x - transform.position.x), 0).normalized / 50;
 
     again:
+        GetComponent<EnemyRunnerSpriteManager>().EnemyAnimator.SetBool("RunnerhasSpotted", true);
         yield return new WaitForSeconds(0.5f);
+        GetComponent<EnemyRunnerSpriteManager>().EnemyAnimator.SetBool("RunnerhasSpotted", false);
 
         GetComponent<EnemyState>()._attacking = true;
         for(int i = 0; i < 20; i++)

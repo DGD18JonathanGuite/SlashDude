@@ -19,18 +19,15 @@ public class DoorIndiv : MonoBehaviour
 
             if (value == 0)
             {
-                Debug.Log("Color0");
                 GetComponent<SpriteRenderer>().material = Runner;
             }
             if (value == 1)
             {
                 GetComponent<SpriteRenderer>().material = Poison;
-                Debug.Log("Color1");
             }
             if (value == 2)
             {
                 GetComponent<SpriteRenderer>().material = Fly;
-                Debug.Log("Color2");
             }
         }
     }

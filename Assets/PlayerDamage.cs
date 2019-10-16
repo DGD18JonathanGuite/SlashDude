@@ -20,7 +20,7 @@ public class PlayerDamage : MonoBehaviour
 
     void _PlayerDamage()
     {
-        Debug.Log("PlayerisHit");
+        //Debug.Log("PlayerisHit");
         Instantiate(PlayerHurt, transform.position, Quaternion.identity);
     }
 

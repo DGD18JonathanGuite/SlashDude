@@ -74,6 +74,8 @@ GameObject:
   - component: {fileID: 5208232516891131538}
   - component: {fileID: 5208232516891131539}
   - component: {fileID: 5208232516891131536}
+  - component: {fileID: -622015456265724731}
+  - component: {fileID: 1344136520987413726}
   m_Layer: 0
   m_Name: Runner Enemy
   m_TagString: Enemy
@@ -133,7 +135,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  m_Sprite: {fileID: 21300000, guid: 9c0f5c1f3ccdc334a8dc99922e2a3e78, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -159,9 +161,9 @@ BoxCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
-    border: {x: 0.049999997, y: 0.049999997, z: 0.049999997, w: 0.049999997}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.16, y: 0.16}
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.53}
+    oldSize: {x: 0.2622857, y: 0.17828572}
     newSize: {x: 0.16, y: 0.16}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -258,3 +260,36 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3fe47ccb817b86241b75932c9fee5f8a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  EnemyRunner: {fileID: -622015456265724731}
+--- !u!95 &-622015456265724731
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5208232516891131547}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: a1bb0374823c1364eaffda8032fb86ab, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &1344136520987413726
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5208232516891131547}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e2f95c4146016344ebcd7594f09579ac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  EnemyAnimator: {fileID: -622015456265724731}

@@ -91,6 +91,8 @@ public class PlayerNormalMovement : MonoBehaviour
     {
         //Debug.Log("Stop");
         PlayerStats.getInstance()._isstopping = true;
+        EventManager.ChangePlayerSpriteAnimation(0);
+
         StartCoroutine(Stop());
     }
 
@@ -98,6 +100,9 @@ public class PlayerNormalMovement : MonoBehaviour
     {
         MovementTriggered = false;
 
+        //DEBUG
+        //Debug.Log("Velocity " + GetComponent<Rigidbody2D>().velocity.x);
+        if(Mathf.Abs(GetComponent<Rigidbody2D>().velocity.x) > 1)
         PlayerStats.getInstance()._canattack = true;
 
         yield return new WaitForSeconds(0.01f);

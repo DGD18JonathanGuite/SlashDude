@@ -10,7 +10,31 @@ public class PlayerStats
     public bool _jumping = false;
     public bool _candash = false;
 
-    public bool _ismoving = false;
+    bool ismoving = false;
+    public bool _ismoving
+    {
+        get
+        {
+            return ismoving;
+        }
+
+        set
+        {
+            ismoving = value;
+                        
+            if (value == true)
+            {                
+                EventManager.ChangePlayerSpriteAnimation(2);
+            }
+
+            else if(value == false)
+            {
+                EventManager.ChangePlayerSpriteAnimation(-2);
+            }
+        }
+    }
+
+
     public bool _ischarging = false;
 
     public bool _istakenexplosion = false;
@@ -35,7 +59,7 @@ public class PlayerStats
             }
             else
             {
-                EventManager.ChangePlayerSpriteAnimation(0);
+                EventManager.ChangePlayerSpriteAnimation(-1);
                 EventManager.ChangeHitbox(0);
             }
         }
@@ -79,8 +103,10 @@ public class PlayerStats
         set
         {
             stopping = value;
-            if (!value)
-                EventManager.ChangePlayerSpriteAnimation(2);
+            if (value == false)
+            {
+                EventManager.ChangePlayerSpriteAnimation(0);
+            }
         }
     }
 
@@ -91,7 +117,7 @@ public class PlayerStats
         {
             _instance = new PlayerStats(false, false, false, false, false, false, false, false , false, false, 0, 3);
         }
-        return _instance;        
+        return _instance;
     }
 
     public PlayerStats(bool dash, bool jump, bool explosion, bool poison, bool jumping, bool canattack, bool candash, bool ismoving, bool ischarging, bool stopping, float grav, int health)

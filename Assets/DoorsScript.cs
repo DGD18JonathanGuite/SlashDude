@@ -36,7 +36,7 @@ public class DoorsScript : MonoBehaviour
                 levelsfinished++;
         }
 
-        Debug.Log("Levels finished: " + levelsfinished);
+        //Debug.Log("Levels finished: " + levelsfinished);
 
         while ((GameObject.Find("Stats").GetComponent<Stats>().LevelsFinished[rdoor] || rdoor == ldoor) && levelsfinished < 2)
         {

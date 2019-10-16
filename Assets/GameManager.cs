@@ -29,14 +29,17 @@ public class GameManager : MonoBehaviour
         
         DontDestroyOnLoad(GameObject.Find("Stats"));
         _levelnumber = SceneManager.GetActiveScene().buildIndex;
-        Debug.Log("Level Number: " + _levelnumber);
+        //Debug.Log("Level Number: " + _levelnumber);
     }
 
     public void ChangeLevel()
-    {        
-        
+    {
+
         if ((SceneManager.GetActiveScene().buildIndex) < 3)
+        {
+            Debug.Log("ChangeLevel " + SceneManager.GetActiveScene().buildIndex);
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        }
         else
             SceneManager.LoadScene(0);
         //Debug.Log("Is the next scene available? " + SceneManager.GetSceneByBuildIndex(SceneManager.GetActiveScene().buildIndex + 1).IsValid());
@@ -54,5 +57,13 @@ public class GameManager : MonoBehaviour
 
         yield return new WaitForSeconds(1.4f);
         SceneManager.LoadScene(0);
+    }
+
+    private void Update()
+    {
+        if (!GameObject.Find("Player") && (Input.GetKey(KeyCode.A)|| Input.GetKey(KeyCode.D)))
+        {
+            SceneManager.LoadScene(0);
+        }
     }
 }

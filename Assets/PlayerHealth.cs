@@ -21,7 +21,7 @@ public class PlayerHealth : MonoBehaviour
     {
         for(int i = 0; i < PlayerStats.getInstance()._playerhealth; i++)
         {
-            Debug.Log("Playerhealth " + PlayerStats.getInstance()._playerhealth);
+            //Debug.Log("Playerhealth " + PlayerStats.getInstance()._playerhealth);
             HP[(HP.Length-1) - i].SetActive(true);
         }
     }

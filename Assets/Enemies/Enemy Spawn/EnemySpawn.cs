@@ -15,7 +15,7 @@ public class EnemySpawn : MonoBehaviour
     public GameObject[] RunnerSpawnPoints;
     public GameObject[] FlyerSpawnPoints;
 
-    public float rate = 1.5f;
+    public bool SpawnFinished = false;
 
     private void Start()
     {
@@ -34,13 +34,21 @@ public class EnemySpawn : MonoBehaviour
         int _spawnnumber = GameObject.Find("Stats").GetComponent<Stats>().spawnnumber;
         spawn = GetComponent<Level1ASpawn>().LvlSpawns;
 
-
+        //DEBUG
         if (_spawnnumber == 0)
             spawn = GetComponent<Level1ASpawn>().LvlSpawns;
         if (_spawnnumber == 1)
-            spawn = GetComponent<Level2ASpawn>().LvlSpawns;
+            spawn = GetComponent<Level1ASpawn>().LvlSpawns;
         if (_spawnnumber == 2)
-            spawn = GetComponent<Level3ASpawn>().LvlSpawns;
+            spawn = GetComponent<Level1ASpawn>().LvlSpawns;
+
+
+        //if (_spawnnumber == 0)
+        //    spawn = GetComponent<Level1ASpawn>().LvlSpawns;
+        //if (_spawnnumber == 1)
+        //    spawn = GetComponent<Level2ASpawn>().LvlSpawns;
+        //if (_spawnnumber == 2)
+        //    spawn = GetComponent<Level3ASpawn>().LvlSpawns;
 
         foreach (SpawnEnemyClass _item in spawn[levelindex])
         {
@@ -48,7 +56,8 @@ public class EnemySpawn : MonoBehaviour
             Instantiate(_item.Enemy, _item.SpawnPoint.transform.position, Quaternion.identity);
         }
 
-        Debug.Log("SpawnFinished");
+        SpawnFinished = true;
+        //Debug.Log("SpawnFinished");
     }
 
 

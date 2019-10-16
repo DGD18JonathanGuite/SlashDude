@@ -6,13 +6,21 @@ public class EnemySpriteManager : MonoBehaviour
 {
     public Sprite Running, Attacking, Idle;
     
-    public Sprite ChangeSprite(int i)
+    //public Sprite ChangeSprite(int i)
+    //{
+    //    if (i == 1)
+    //        return Running;
+    //    else if (i == 2)
+    //        return Attacking;
+    //    else
+    //        return Idle;
+    //}
+
+    public void ChangeSprite()
     {
-        if (i == 1)
-            return Running;
-        else if (i == 2)
-            return Attacking;
-        else
-            return Idle;
+        if (GetComponent<EnemyRunner>())
+            GetComponent<EnemyRunnerSpriteManager>().ChangeRunnerSprite();
+        //if(GetComponent<JumperEnemy>())
+        //    GetComponent<>
     }
 }

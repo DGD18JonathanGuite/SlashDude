@@ -58,7 +58,7 @@ public class FlyerEnemy : MonoBehaviour
     void AttackHorizontal()
     {
         Stop();
-        Debug.Log("Hor");
+        //Debug.Log("Hor");
         StartCoroutine(Slide());
     }
 

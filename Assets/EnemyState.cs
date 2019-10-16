@@ -15,10 +15,6 @@ public class EnemyState : MonoBehaviour
         set
         {
             attacking = value;
-            if (value)
-                GetComponent<SpriteRenderer>().sprite = GetComponent<EnemySpriteManager>().ChangeSprite(2);
-            else
-                GetComponent<SpriteRenderer>().sprite = GetComponent<EnemySpriteManager>().ChangeSprite(0);
         }
     }
 
@@ -33,14 +29,6 @@ public class EnemyState : MonoBehaviour
         set
         {
             running = value;
-            if (value)
-            {
-                GetComponent<SpriteRenderer>().sprite = GetComponent<EnemySpriteManager>().ChangeSprite(1);
-            }
-            else
-            {
-                GetComponent<SpriteRenderer>().sprite = GetComponent<EnemySpriteManager>().ChangeSprite(0);
-            }
         }
     }
 
@@ -58,14 +46,14 @@ public class EnemyState : MonoBehaviour
             facingleft = value;
             if (value)
             {
-                GetComponent<SpriteRenderer>().flipX = false;
+                //GetComponent<SpriteRenderer>().flipX = false;
                 transform.rotation = Quaternion.Euler(0, 0, 0);
                 _directionmodifier = 1;
 
             }
             else
             {
-                GetComponent<SpriteRenderer>().flipX = true;
+                //GetComponent<SpriteRenderer>().flipX = true;
                 transform.rotation = Quaternion.Euler(0, -180, 0);
                 _directionmodifier = -1;
             }

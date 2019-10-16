@@ -12,18 +12,11 @@ public class PlayerCollision : MonoBehaviour
     private void OnEnable()
     {
         EventManager.EnemySpawn += IgnoreCollisions;
-        EventManager.PlayerisDead += PlayerDied;
     }
 
     private void OnDisable()
     {
         EventManager.EnemySpawn -= IgnoreCollisions;
-        EventManager.PlayerisDead -= PlayerDied;
-    }
-
-    void PlayerDied()
-    {
-
     }
 
     void IgnoreCollisions()
@@ -33,7 +26,6 @@ public class PlayerCollision : MonoBehaviour
         foreach (GameObject item in GameObject.FindGameObjectsWithTag("Boss"))
             Physics2D.IgnoreCollision(item.GetComponent<Collider2D>(), GetComponent<BoxCollider2D>());
     }
-
 
     IEnumerator PlayerIsBurning()
     {
@@ -64,7 +56,6 @@ public class PlayerCollision : MonoBehaviour
         GetComponent<SpriteRenderer>().color = new Color32(255, 255, 255, 255);
     }
 
-
     public bool _playerisburning = false;
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -77,10 +68,16 @@ public class PlayerCollision : MonoBehaviour
 
         if(collision.gameObject.tag == "Door")
         {
+            //Debug.Log("Dorr is touched");
+
             if (GameObject.Find("GameManager").GetComponent<GameManager>()._levelnumber == 0)
             {
+                //Debug.Log("Dorr has been touched");
+
                 if (collision.gameObject.name == "LDoor")
                 {
+                    //Debug.Log("LDorr is being touched");
+
                     GameObject.Find("Stats").GetComponent<Stats>().leftdoor = true;
                     GameObject.Find("Stats").GetComponent<Stats>().spawnnumber = collision.GetComponent<DoorIndiv>().doorid;
 
@@ -88,12 +85,16 @@ public class PlayerCollision : MonoBehaviour
                 }
                 else if (collision.gameObject.name == "RDoor")
                 {
+                    //Debug.Log("RDorr is being touched");
+
                     GameObject.Find("Stats").GetComponent<Stats>().leftdoor = false;
                     GameObject.Find("Stats").GetComponent<Stats>().spawnnumber = collision.GetComponent<DoorIndiv>().doorid;
 
                     GameObject.Find("Stats").GetComponent<Stats>().LevelsFinished[collision.GetComponent<DoorIndiv>().doorid] = true;
                 }
             }
+
+            Debug.Log("Dorr was touched");
 
             EventManager.ChangeLevel();
         }
@@ -124,7 +125,7 @@ public class PlayerCollision : MonoBehaviour
         else
         {
             _playerisburning = false;
-            Debug.Log("nulls");
+            //Debug.Log("nulls");
         }
     }
 }

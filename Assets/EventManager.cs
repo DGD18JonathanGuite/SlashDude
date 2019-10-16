@@ -28,4 +28,6 @@ public class EventManager
     public static System.Action OpenDoors;
 
     public static System.Action PlayerisDead;
+
+    public static System.Action EnemyisHit;
 }

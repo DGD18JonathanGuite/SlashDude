@@ -11,6 +11,8 @@ public class PlayerAttack : MonoBehaviour
     {
         if (collision.gameObject.tag == "PlayerAttack" && PlayerStats.getInstance()._canattack)
         {
+            EventManager.EnemyisHit();
+
             if(gameObject.tag == "Enemy" || gameObject.tag == "PoisonPool")
             EnemyDeath();
 
@@ -32,7 +34,9 @@ public class PlayerAttack : MonoBehaviour
     {
         EventManager.EnemyisDead();
 
-        ParticleSystem PDeath = Instantiate(ParticleDeath, transform.position, Quaternion.Euler(GameObject.Find("Player").transform.rotation.eulerAngles + new Vector3(0,90,0)));
+        ParticleSystem PDeath = Instantiate(ParticleDeath, transform.position, Quaternion.Euler(GameObject.Find("Player").transform.rotation.eulerAngles + new Vector3(-45,90,0)));
+        //ParticleSystem PDeath = Instantiate(ParticleDeath, transform.position, Quaternion.Euler(GameObject.Find("Player").transform.rotation.eulerAngles + new Vector3(0, 90, 0)));
+
         Destroy(gameObject);
     }
 

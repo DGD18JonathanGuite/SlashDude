@@ -99,7 +99,6 @@ public class PlayerCharge : MonoBehaviour
                 else
                     _chargenumber = charge_2;
             }
-
             else
                 _chargenumber = charge_1;
         }
