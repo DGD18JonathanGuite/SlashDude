@@ -463,6 +463,66 @@ MonoBehaviour:
   - {fileID: 346326905}
   - {fileID: 2002008134}
   hitcount: 0
+--- !u!1 &407313394
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 407313395}
+  m_Layer: 0
+  m_Name: RunnerBossSpawn
+  m_TagString: Untagged
+  m_Icon: {fileID: -5442936267250999957, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &407313395
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 407313394}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.634, y: -1.121, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1024113387}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &531434238
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 531434239}
+  m_Layer: 0
+  m_Name: FlyerSpawnPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 1206586993520771344, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &531434239
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 531434238}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -1.595, y: 0.11, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1024113387}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &540622404
 GameObject:
   m_ObjectHideFlags: 0
@@ -889,6 +949,36 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+--- !u!1 &718517976
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 718517977}
+  m_Layer: 0
+  m_Name: RunnerSpawnPoint (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 7174288486110832750, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &718517977
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 718517976}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 2.881, y: -1.307, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1024113387}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &844893204
 GameObject:
   m_ObjectHideFlags: 0
@@ -1258,66 +1348,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &896074744
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 896074745}
-  m_Layer: 0
-  m_Name: RunnerSpawnPoint
-  m_TagString: Untagged
-  m_Icon: {fileID: 7174288486110832750, guid: 0000000000000000d000000000000000, type: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &896074745
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 896074744}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.621, y: -1.307, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1838815850}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &901896558
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 901896559}
-  m_Layer: 0
-  m_Name: FlyerSpawnPoint
-  m_TagString: Untagged
-  m_Icon: {fileID: 1206586993520771344, guid: 0000000000000000d000000000000000, type: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &901896559
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 901896558}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.595, y: 0.11, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1838815850}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &963194225
 GameObject:
   m_ObjectHideFlags: 0
@@ -1415,6 +1445,379 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Player: {fileID: 0}
+--- !u!1 &1024113382
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1024113387}
+  - component: {fileID: 1024113386}
+  - component: {fileID: 1024113385}
+  - component: {fileID: 1024113384}
+  - component: {fileID: 1024113383}
+  m_Layer: 0
+  m_Name: EnemySpawn
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1024113383
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1024113382}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0977ee00476fafa488d016f98a38af1b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawn1: []
+  spawn2: []
+  spawn3: []
+  spawnboss: []
+--- !u!114 &1024113384
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1024113382}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 787afce2170ad05438c3298224450dc3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawn1:
+  - timing: 0
+    Enemy: {fileID: 9121534340414073874, guid: 6170d2b95ee2d364ca1acf731ced51c8, type: 3}
+    SpawnPoint: {fileID: 1040037866}
+  - timing: 0
+    Enemy: {fileID: 9121534340414073874, guid: 6170d2b95ee2d364ca1acf731ced51c8, type: 3}
+    SpawnPoint: {fileID: 1040037866}
+  - timing: 0
+    Enemy: {fileID: 9121534340414073874, guid: 6170d2b95ee2d364ca1acf731ced51c8, type: 3}
+    SpawnPoint: {fileID: 1040037866}
+  - timing: 0
+    Enemy: {fileID: 9121534340414073874, guid: 6170d2b95ee2d364ca1acf731ced51c8, type: 3}
+    SpawnPoint: {fileID: 1040037866}
+  - timing: 0
+    Enemy: {fileID: 9121534340414073874, guid: 6170d2b95ee2d364ca1acf731ced51c8, type: 3}
+    SpawnPoint: {fileID: 1040037866}
+  spawn2:
+  - timing: 1
+    Enemy: {fileID: 5208232516891131547, guid: 4bd0cbd104212e042a000bdd2828e834, type: 3}
+    SpawnPoint: {fileID: 718517976}
+  - timing: 0.5
+    Enemy: {fileID: 5208232516891131547, guid: 4bd0cbd104212e042a000bdd2828e834, type: 3}
+    SpawnPoint: {fileID: 1040037866}
+  - timing: 0.5
+    Enemy: {fileID: 5208232516891131547, guid: 4bd0cbd104212e042a000bdd2828e834, type: 3}
+    SpawnPoint: {fileID: 718517976}
+  - timing: 1
+    Enemy: {fileID: 9121534340414073874, guid: 6170d2b95ee2d364ca1acf731ced51c8, type: 3}
+    SpawnPoint: {fileID: 1040037866}
+  - timing: 0.5
+    Enemy: {fileID: 9121534340414073874, guid: 6170d2b95ee2d364ca1acf731ced51c8, type: 3}
+    SpawnPoint: {fileID: 718517976}
+  - timing: 0.5
+    Enemy: {fileID: 5208232516891131547, guid: 4bd0cbd104212e042a000bdd2828e834, type: 3}
+    SpawnPoint: {fileID: 1040037866}
+  - timing: 0.5
+    Enemy: {fileID: 9121534340414073874, guid: 6170d2b95ee2d364ca1acf731ced51c8, type: 3}
+    SpawnPoint: {fileID: 718517976}
+  - timing: 0.5
+    Enemy: {fileID: 9121534340414073874, guid: 6170d2b95ee2d364ca1acf731ced51c8, type: 3}
+    SpawnPoint: {fileID: 1040037866}
+  - timing: 0.5
+    Enemy: {fileID: 5208232516891131547, guid: 4bd0cbd104212e042a000bdd2828e834, type: 3}
+    SpawnPoint: {fileID: 718517976}
+  - timing: 0.5
+    Enemy: {fileID: 9121534340414073874, guid: 6170d2b95ee2d364ca1acf731ced51c8, type: 3}
+    SpawnPoint: {fileID: 1040037866}
+  spawn3:
+  - timing: 1
+    Enemy: {fileID: 9121534340414073874, guid: 6170d2b95ee2d364ca1acf731ced51c8, type: 3}
+    SpawnPoint: {fileID: 1040037866}
+  - timing: 0.4
+    Enemy: {fileID: 9121534340414073874, guid: 6170d2b95ee2d364ca1acf731ced51c8, type: 3}
+    SpawnPoint: {fileID: 718517976}
+  - timing: 0.4
+    Enemy: {fileID: 9121534340414073874, guid: 6170d2b95ee2d364ca1acf731ced51c8, type: 3}
+    SpawnPoint: {fileID: 1040037866}
+  - timing: 0.4
+    Enemy: {fileID: 9121534340414073874, guid: 6170d2b95ee2d364ca1acf731ced51c8, type: 3}
+    SpawnPoint: {fileID: 718517976}
+  - timing: 0.4
+    Enemy: {fileID: 9121534340414073874, guid: 6170d2b95ee2d364ca1acf731ced51c8, type: 3}
+    SpawnPoint: {fileID: 1040037866}
+  - timing: 0.4
+    Enemy: {fileID: 9121534340414073874, guid: 6170d2b95ee2d364ca1acf731ced51c8, type: 3}
+    SpawnPoint: {fileID: 718517976}
+  - timing: 0.4
+    Enemy: {fileID: 9121534340414073874, guid: 6170d2b95ee2d364ca1acf731ced51c8, type: 3}
+    SpawnPoint: {fileID: 1040037866}
+  - timing: 0.4
+    Enemy: {fileID: 9121534340414073874, guid: 6170d2b95ee2d364ca1acf731ced51c8, type: 3}
+    SpawnPoint: {fileID: 718517976}
+  - timing: 0.4
+    Enemy: {fileID: 9121534340414073874, guid: 6170d2b95ee2d364ca1acf731ced51c8, type: 3}
+    SpawnPoint: {fileID: 1040037866}
+  - timing: 1
+    Enemy: {fileID: 9121534340414073874, guid: 6170d2b95ee2d364ca1acf731ced51c8, type: 3}
+    SpawnPoint: {fileID: 718517976}
+  - timing: 0.4
+    Enemy: {fileID: 9121534340414073874, guid: 6170d2b95ee2d364ca1acf731ced51c8, type: 3}
+    SpawnPoint: {fileID: 718517976}
+  - timing: 0.4
+    Enemy: {fileID: 9121534340414073874, guid: 6170d2b95ee2d364ca1acf731ced51c8, type: 3}
+    SpawnPoint: {fileID: 718517976}
+  - timing: 1
+    Enemy: {fileID: 5208232516891131547, guid: 4bd0cbd104212e042a000bdd2828e834, type: 3}
+    SpawnPoint: {fileID: 718517976}
+  - timing: 0.4
+    Enemy: {fileID: 9121534340414073874, guid: 6170d2b95ee2d364ca1acf731ced51c8, type: 3}
+    SpawnPoint: {fileID: 1040037866}
+  - timing: 0.4
+    Enemy: {fileID: 5208232516891131547, guid: 4bd0cbd104212e042a000bdd2828e834, type: 3}
+    SpawnPoint: {fileID: 718517976}
+  - timing: 0.4
+    Enemy: {fileID: 9121534340414073874, guid: 6170d2b95ee2d364ca1acf731ced51c8, type: 3}
+    SpawnPoint: {fileID: 1040037866}
+  - timing: 0.4
+    Enemy: {fileID: 9121534340414073874, guid: 6170d2b95ee2d364ca1acf731ced51c8, type: 3}
+    SpawnPoint: {fileID: 718517976}
+  - timing: 0.4
+    Enemy: {fileID: 5208232516891131547, guid: 4bd0cbd104212e042a000bdd2828e834, type: 3}
+    SpawnPoint: {fileID: 1040037866}
+  - timing: 0.4
+    Enemy: {fileID: 5208232516891131547, guid: 4bd0cbd104212e042a000bdd2828e834, type: 3}
+    SpawnPoint: {fileID: 718517976}
+  - timing: 0.4
+    Enemy: {fileID: 9121534340414073874, guid: 6170d2b95ee2d364ca1acf731ced51c8, type: 3}
+    SpawnPoint: {fileID: 1040037866}
+  - timing: 0.4
+    Enemy: {fileID: 9121534340414073874, guid: 6170d2b95ee2d364ca1acf731ced51c8, type: 3}
+    SpawnPoint: {fileID: 718517976}
+  - timing: 0.4
+    Enemy: {fileID: 5208232516891131547, guid: 4bd0cbd104212e042a000bdd2828e834, type: 3}
+    SpawnPoint: {fileID: 1040037866}
+  - timing: 0.4
+    Enemy: {fileID: 9121534340414073874, guid: 6170d2b95ee2d364ca1acf731ced51c8, type: 3}
+    SpawnPoint: {fileID: 718517976}
+  - timing: 0.4
+    Enemy: {fileID: 9121534340414073874, guid: 6170d2b95ee2d364ca1acf731ced51c8, type: 3}
+    SpawnPoint: {fileID: 1040037866}
+  - timing: 0.4
+    Enemy: {fileID: 9121534340414073874, guid: 6170d2b95ee2d364ca1acf731ced51c8, type: 3}
+    SpawnPoint: {fileID: 718517976}
+  spawnboss:
+  - timing: 1
+    Enemy: {fileID: 6532499675634064561, guid: 5aa20ca07dec9a049ac19a0ba8499f63, type: 3}
+    SpawnPoint: {fileID: 407313394}
+--- !u!114 &1024113385
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1024113382}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a18751716e83e7745a2a466e4092364e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawn1: []
+  spawn2:
+  - timing: 1
+    Enemy: {fileID: 5208232516891131547, guid: 4bd0cbd104212e042a000bdd2828e834, type: 3}
+    SpawnPoint: {fileID: 1040037866}
+  - timing: 1
+    Enemy: {fileID: 5208232516891131547, guid: 4bd0cbd104212e042a000bdd2828e834, type: 3}
+    SpawnPoint: {fileID: 718517976}
+  - timing: 1
+    Enemy: {fileID: 5208232516891131547, guid: 4bd0cbd104212e042a000bdd2828e834, type: 3}
+    SpawnPoint: {fileID: 1040037866}
+  - timing: 2
+    Enemy: {fileID: 5208232516891131547, guid: 4bd0cbd104212e042a000bdd2828e834, type: 3}
+    SpawnPoint: {fileID: 1040037866}
+  - timing: 0.5
+    Enemy: {fileID: 5208232516891131547, guid: 4bd0cbd104212e042a000bdd2828e834, type: 3}
+    SpawnPoint: {fileID: 718517976}
+  - timing: 0.5
+    Enemy: {fileID: 5208232516891131547, guid: 4bd0cbd104212e042a000bdd2828e834, type: 3}
+    SpawnPoint: {fileID: 1040037866}
+  - timing: 0.5
+    Enemy: {fileID: 5208232516891131547, guid: 4bd0cbd104212e042a000bdd2828e834, type: 3}
+    SpawnPoint: {fileID: 718517976}
+  - timing: 0.5
+    Enemy: {fileID: 5208232516891131547, guid: 4bd0cbd104212e042a000bdd2828e834, type: 3}
+    SpawnPoint: {fileID: 718517976}
+  - timing: 0.5
+    Enemy: {fileID: 5208232516891131547, guid: 4bd0cbd104212e042a000bdd2828e834, type: 3}
+    SpawnPoint: {fileID: 718517976}
+  - timing: 0.5
+    Enemy: {fileID: 5208232516891131547, guid: 4bd0cbd104212e042a000bdd2828e834, type: 3}
+    SpawnPoint: {fileID: 1040037866}
+  spawn3:
+  - timing: 1
+    Enemy: {fileID: 5208232516891131547, guid: 4bd0cbd104212e042a000bdd2828e834, type: 3}
+    SpawnPoint: {fileID: 718517976}
+  - timing: 1
+    Enemy: {fileID: 5208232516891131547, guid: 4bd0cbd104212e042a000bdd2828e834, type: 3}
+    SpawnPoint: {fileID: 1040037866}
+  - timing: 1
+    Enemy: {fileID: 5208232516891131547, guid: 4bd0cbd104212e042a000bdd2828e834, type: 3}
+    SpawnPoint: {fileID: 718517976}
+  - timing: 1
+    Enemy: {fileID: 5208232516891131547, guid: 4bd0cbd104212e042a000bdd2828e834, type: 3}
+    SpawnPoint: {fileID: 1040037866}
+  - timing: 1
+    Enemy: {fileID: 5208232516891131547, guid: 4bd0cbd104212e042a000bdd2828e834, type: 3}
+    SpawnPoint: {fileID: 718517976}
+  - timing: 2
+    Enemy: {fileID: 5208232516891131547, guid: 4bd0cbd104212e042a000bdd2828e834, type: 3}
+    SpawnPoint: {fileID: 1040037866}
+  - timing: 0.5
+    Enemy: {fileID: 5208232516891131547, guid: 4bd0cbd104212e042a000bdd2828e834, type: 3}
+    SpawnPoint: {fileID: 718517976}
+  - timing: 0.5
+    Enemy: {fileID: 5208232516891131547, guid: 4bd0cbd104212e042a000bdd2828e834, type: 3}
+    SpawnPoint: {fileID: 1040037866}
+  - timing: 0.5
+    Enemy: {fileID: 5208232516891131547, guid: 4bd0cbd104212e042a000bdd2828e834, type: 3}
+    SpawnPoint: {fileID: 718517976}
+  - timing: 0.5
+    Enemy: {fileID: 5208232516891131547, guid: 4bd0cbd104212e042a000bdd2828e834, type: 3}
+    SpawnPoint: {fileID: 1040037866}
+  - timing: 0.5
+    Enemy: {fileID: 5208232516891131547, guid: 4bd0cbd104212e042a000bdd2828e834, type: 3}
+    SpawnPoint: {fileID: 718517976}
+  - timing: 0.5
+    Enemy: {fileID: 5208232516891131547, guid: 4bd0cbd104212e042a000bdd2828e834, type: 3}
+    SpawnPoint: {fileID: 1040037866}
+  - timing: 0.5
+    Enemy: {fileID: 5208232516891131547, guid: 4bd0cbd104212e042a000bdd2828e834, type: 3}
+    SpawnPoint: {fileID: 718517976}
+  - timing: 0.5
+    Enemy: {fileID: 5208232516891131547, guid: 4bd0cbd104212e042a000bdd2828e834, type: 3}
+    SpawnPoint: {fileID: 1040037866}
+  - timing: 2
+    Enemy: {fileID: 5208232516891131547, guid: 4bd0cbd104212e042a000bdd2828e834, type: 3}
+    SpawnPoint: {fileID: 718517976}
+  - timing: 0.5
+    Enemy: {fileID: 5208232516891131547, guid: 4bd0cbd104212e042a000bdd2828e834, type: 3}
+    SpawnPoint: {fileID: 1040037866}
+  - timing: 0.5
+    Enemy: {fileID: 5208232516891131547, guid: 4bd0cbd104212e042a000bdd2828e834, type: 3}
+    SpawnPoint: {fileID: 718517976}
+  - timing: 0.5
+    Enemy: {fileID: 5208232516891131547, guid: 4bd0cbd104212e042a000bdd2828e834, type: 3}
+    SpawnPoint: {fileID: 1040037866}
+  - timing: 0.5
+    Enemy: {fileID: 5208232516891131547, guid: 4bd0cbd104212e042a000bdd2828e834, type: 3}
+    SpawnPoint: {fileID: 718517976}
+  - timing: 0.5
+    Enemy: {fileID: 5208232516891131547, guid: 4bd0cbd104212e042a000bdd2828e834, type: 3}
+    SpawnPoint: {fileID: 1040037866}
+  - timing: 0.5
+    Enemy: {fileID: 5208232516891131547, guid: 4bd0cbd104212e042a000bdd2828e834, type: 3}
+    SpawnPoint: {fileID: 718517976}
+  - timing: 0.5
+    Enemy: {fileID: 5208232516891131547, guid: 4bd0cbd104212e042a000bdd2828e834, type: 3}
+    SpawnPoint: {fileID: 1040037866}
+  - timing: 0.5
+    Enemy: {fileID: 5208232516891131547, guid: 4bd0cbd104212e042a000bdd2828e834, type: 3}
+    SpawnPoint: {fileID: 718517976}
+  - timing: 0.5
+    Enemy: {fileID: 5208232516891131547, guid: 4bd0cbd104212e042a000bdd2828e834, type: 3}
+    SpawnPoint: {fileID: 1040037866}
+  - timing: 0.5
+    Enemy: {fileID: 5208232516891131547, guid: 4bd0cbd104212e042a000bdd2828e834, type: 3}
+    SpawnPoint: {fileID: 718517976}
+  spawnboss:
+  - timing: 1
+    Enemy: {fileID: 6532499675634064561, guid: 5aa20ca07dec9a049ac19a0ba8499f63, type: 3}
+    SpawnPoint: {fileID: 407313394}
+--- !u!114 &1024113386
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1024113382}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 38d72b01c7aae884f9972615a58dc777, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Runner: {fileID: 5208232516891131547, guid: 4bd0cbd104212e042a000bdd2828e834, type: 3}
+  Jumper: {fileID: 9121534340414073874, guid: 6170d2b95ee2d364ca1acf731ced51c8, type: 3}
+  Flyer: {fileID: 8177748073100890610, guid: 36be3b0599446384eadd4d71e57b745a, type: 3}
+  BRunner: {fileID: 6532499675634064561, guid: 5aa20ca07dec9a049ac19a0ba8499f63, type: 3}
+  BJumper: {fileID: 8943087428303015360, guid: 5f7ff596b52e7d64a8a37a49495c679f, type: 3}
+  BFlyer: {fileID: 7396454800020120528, guid: d29d2a708143efd4c894f1c1d2f546f5, type: 3}
+  RunnerSpawnPoints:
+  - {fileID: 1040037866}
+  - {fileID: 718517976}
+  FlyerSpawnPoints:
+  - {fileID: 531434238}
+  - {fileID: 2146642478}
+  SpawnFinished: 0
+--- !u!4 &1024113387
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1024113382}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.64120257, y: 1.5358182, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 531434239}
+  - {fileID: 1040037867}
+  - {fileID: 718517977}
+  - {fileID: 2146642479}
+  - {fileID: 407313395}
+  m_Father: {fileID: 0}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1040037866
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1040037867}
+  m_Layer: 0
+  m_Name: RunnerSpawnPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 7174288486110832750, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1040037867
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1040037866}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -1.621, y: -1.307, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1024113387}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1042093707
 GameObject:
   m_ObjectHideFlags: 0
@@ -1595,66 +1998,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1168745951}
   m_CullTransparentMesh: 0
---- !u!1 &1240060158
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1240060159}
-  m_Layer: 0
-  m_Name: RunnerBossSpawn
-  m_TagString: Untagged
-  m_Icon: {fileID: -5442936267250999957, guid: 0000000000000000d000000000000000, type: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1240060159
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1240060158}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.634, y: -1.121, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1838815850}
-  m_RootOrder: 4
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1464938502
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1464938503}
-  m_Layer: 0
-  m_Name: FlyerSpawnPoint (1)
-  m_TagString: Untagged
-  m_Icon: {fileID: 1206586993520771344, guid: 0000000000000000d000000000000000, type: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1464938503
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1464938502}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.844, y: 0.11, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1838815850}
-  m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1701160084
 GameObject:
   m_ObjectHideFlags: 0
@@ -1761,283 +2104,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!1 &1766682740
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1766682741}
-  m_Layer: 0
-  m_Name: RunnerSpawnPoint (1)
-  m_TagString: Untagged
-  m_Icon: {fileID: 7174288486110832750, guid: 0000000000000000d000000000000000, type: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1766682741
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1766682740}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.881, y: -1.307, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1838815850}
-  m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1838815845
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1838815850}
-  - component: {fileID: 1838815849}
-  - component: {fileID: 1838815848}
-  - component: {fileID: 1838815847}
-  - component: {fileID: 1838815846}
-  m_Layer: 0
-  m_Name: EnemySpawn
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1838815846
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1838815845}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0977ee00476fafa488d016f98a38af1b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  spawn1: []
-  spawn2: []
-  spawn3: []
-  spawnboss: []
---- !u!114 &1838815847
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1838815845}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 787afce2170ad05438c3298224450dc3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  spawn1:
-  - timing: 0
-    Enemy: {fileID: 9121534340414073874, guid: 6170d2b95ee2d364ca1acf731ced51c8, type: 3}
-    SpawnPoint: {fileID: 896074744}
-  - timing: 0
-    Enemy: {fileID: 9121534340414073874, guid: 6170d2b95ee2d364ca1acf731ced51c8, type: 3}
-    SpawnPoint: {fileID: 896074744}
-  - timing: 0
-    Enemy: {fileID: 9121534340414073874, guid: 6170d2b95ee2d364ca1acf731ced51c8, type: 3}
-    SpawnPoint: {fileID: 896074744}
-  - timing: 0
-    Enemy: {fileID: 9121534340414073874, guid: 6170d2b95ee2d364ca1acf731ced51c8, type: 3}
-    SpawnPoint: {fileID: 896074744}
-  - timing: 0
-    Enemy: {fileID: 9121534340414073874, guid: 6170d2b95ee2d364ca1acf731ced51c8, type: 3}
-    SpawnPoint: {fileID: 896074744}
-  spawn2:
-  - timing: 0
-    Enemy: {fileID: 5208232516891131547, guid: 4bd0cbd104212e042a000bdd2828e834, type: 3}
-    SpawnPoint: {fileID: 1766682740}
-  spawn3:
-  - timing: 0
-    Enemy: {fileID: 5208232516891131547, guid: 4bd0cbd104212e042a000bdd2828e834, type: 3}
-    SpawnPoint: {fileID: 896074744}
-  - timing: 1
-    Enemy: {fileID: 9121534340414073874, guid: 6170d2b95ee2d364ca1acf731ced51c8, type: 3}
-    SpawnPoint: {fileID: 1766682740}
-  spawnboss: []
---- !u!114 &1838815848
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1838815845}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a18751716e83e7745a2a466e4092364e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  spawn1:
-  - timing: 1
-    Enemy: {fileID: 4737473753317427239, guid: 13b81c77a6678c6438d396a0a03b2cab, type: 3}
-    SpawnPoint: {fileID: 896074744}
-  spawn2:
-  - timing: 1
-    Enemy: {fileID: 5208232516891131547, guid: 4bd0cbd104212e042a000bdd2828e834, type: 3}
-    SpawnPoint: {fileID: 896074744}
-  - timing: 1
-    Enemy: {fileID: 5208232516891131547, guid: 4bd0cbd104212e042a000bdd2828e834, type: 3}
-    SpawnPoint: {fileID: 1766682740}
-  - timing: 1
-    Enemy: {fileID: 5208232516891131547, guid: 4bd0cbd104212e042a000bdd2828e834, type: 3}
-    SpawnPoint: {fileID: 896074744}
-  - timing: 2
-    Enemy: {fileID: 5208232516891131547, guid: 4bd0cbd104212e042a000bdd2828e834, type: 3}
-    SpawnPoint: {fileID: 896074744}
-  - timing: 0.5
-    Enemy: {fileID: 5208232516891131547, guid: 4bd0cbd104212e042a000bdd2828e834, type: 3}
-    SpawnPoint: {fileID: 1766682740}
-  - timing: 0.5
-    Enemy: {fileID: 5208232516891131547, guid: 4bd0cbd104212e042a000bdd2828e834, type: 3}
-    SpawnPoint: {fileID: 896074744}
-  - timing: 0.5
-    Enemy: {fileID: 5208232516891131547, guid: 4bd0cbd104212e042a000bdd2828e834, type: 3}
-    SpawnPoint: {fileID: 1766682740}
-  - timing: 0.5
-    Enemy: {fileID: 5208232516891131547, guid: 4bd0cbd104212e042a000bdd2828e834, type: 3}
-    SpawnPoint: {fileID: 1766682740}
-  - timing: 0.5
-    Enemy: {fileID: 5208232516891131547, guid: 4bd0cbd104212e042a000bdd2828e834, type: 3}
-    SpawnPoint: {fileID: 1766682740}
-  - timing: 0.5
-    Enemy: {fileID: 5208232516891131547, guid: 4bd0cbd104212e042a000bdd2828e834, type: 3}
-    SpawnPoint: {fileID: 896074744}
-  spawn3:
-  - timing: 1
-    Enemy: {fileID: 5208232516891131547, guid: 4bd0cbd104212e042a000bdd2828e834, type: 3}
-    SpawnPoint: {fileID: 1766682740}
-  - timing: 1
-    Enemy: {fileID: 5208232516891131547, guid: 4bd0cbd104212e042a000bdd2828e834, type: 3}
-    SpawnPoint: {fileID: 896074744}
-  - timing: 1
-    Enemy: {fileID: 5208232516891131547, guid: 4bd0cbd104212e042a000bdd2828e834, type: 3}
-    SpawnPoint: {fileID: 1766682740}
-  - timing: 1
-    Enemy: {fileID: 5208232516891131547, guid: 4bd0cbd104212e042a000bdd2828e834, type: 3}
-    SpawnPoint: {fileID: 896074744}
-  - timing: 1
-    Enemy: {fileID: 5208232516891131547, guid: 4bd0cbd104212e042a000bdd2828e834, type: 3}
-    SpawnPoint: {fileID: 1766682740}
-  - timing: 2
-    Enemy: {fileID: 5208232516891131547, guid: 4bd0cbd104212e042a000bdd2828e834, type: 3}
-    SpawnPoint: {fileID: 896074744}
-  - timing: 0.5
-    Enemy: {fileID: 5208232516891131547, guid: 4bd0cbd104212e042a000bdd2828e834, type: 3}
-    SpawnPoint: {fileID: 1766682740}
-  - timing: 0.5
-    Enemy: {fileID: 5208232516891131547, guid: 4bd0cbd104212e042a000bdd2828e834, type: 3}
-    SpawnPoint: {fileID: 896074744}
-  - timing: 0.5
-    Enemy: {fileID: 5208232516891131547, guid: 4bd0cbd104212e042a000bdd2828e834, type: 3}
-    SpawnPoint: {fileID: 1766682740}
-  - timing: 0.5
-    Enemy: {fileID: 5208232516891131547, guid: 4bd0cbd104212e042a000bdd2828e834, type: 3}
-    SpawnPoint: {fileID: 896074744}
-  - timing: 0.5
-    Enemy: {fileID: 5208232516891131547, guid: 4bd0cbd104212e042a000bdd2828e834, type: 3}
-    SpawnPoint: {fileID: 1766682740}
-  - timing: 0.5
-    Enemy: {fileID: 5208232516891131547, guid: 4bd0cbd104212e042a000bdd2828e834, type: 3}
-    SpawnPoint: {fileID: 896074744}
-  - timing: 0.5
-    Enemy: {fileID: 5208232516891131547, guid: 4bd0cbd104212e042a000bdd2828e834, type: 3}
-    SpawnPoint: {fileID: 1766682740}
-  - timing: 0.5
-    Enemy: {fileID: 5208232516891131547, guid: 4bd0cbd104212e042a000bdd2828e834, type: 3}
-    SpawnPoint: {fileID: 896074744}
-  - timing: 2
-    Enemy: {fileID: 5208232516891131547, guid: 4bd0cbd104212e042a000bdd2828e834, type: 3}
-    SpawnPoint: {fileID: 1766682740}
-  - timing: 0.5
-    Enemy: {fileID: 5208232516891131547, guid: 4bd0cbd104212e042a000bdd2828e834, type: 3}
-    SpawnPoint: {fileID: 896074744}
-  - timing: 0.5
-    Enemy: {fileID: 5208232516891131547, guid: 4bd0cbd104212e042a000bdd2828e834, type: 3}
-    SpawnPoint: {fileID: 1766682740}
-  - timing: 0.5
-    Enemy: {fileID: 5208232516891131547, guid: 4bd0cbd104212e042a000bdd2828e834, type: 3}
-    SpawnPoint: {fileID: 896074744}
-  - timing: 0.5
-    Enemy: {fileID: 5208232516891131547, guid: 4bd0cbd104212e042a000bdd2828e834, type: 3}
-    SpawnPoint: {fileID: 1766682740}
-  - timing: 0.5
-    Enemy: {fileID: 5208232516891131547, guid: 4bd0cbd104212e042a000bdd2828e834, type: 3}
-    SpawnPoint: {fileID: 896074744}
-  - timing: 0.5
-    Enemy: {fileID: 5208232516891131547, guid: 4bd0cbd104212e042a000bdd2828e834, type: 3}
-    SpawnPoint: {fileID: 1766682740}
-  - timing: 0.5
-    Enemy: {fileID: 5208232516891131547, guid: 4bd0cbd104212e042a000bdd2828e834, type: 3}
-    SpawnPoint: {fileID: 896074744}
-  - timing: 0.5
-    Enemy: {fileID: 5208232516891131547, guid: 4bd0cbd104212e042a000bdd2828e834, type: 3}
-    SpawnPoint: {fileID: 1766682740}
-  - timing: 0.5
-    Enemy: {fileID: 5208232516891131547, guid: 4bd0cbd104212e042a000bdd2828e834, type: 3}
-    SpawnPoint: {fileID: 896074744}
-  - timing: 0.5
-    Enemy: {fileID: 5208232516891131547, guid: 4bd0cbd104212e042a000bdd2828e834, type: 3}
-    SpawnPoint: {fileID: 1766682740}
-  spawnboss:
-  - timing: 1
-    Enemy: {fileID: 6532499675634064561, guid: 5aa20ca07dec9a049ac19a0ba8499f63, type: 3}
-    SpawnPoint: {fileID: 1240060158}
---- !u!114 &1838815849
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1838815845}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 38d72b01c7aae884f9972615a58dc777, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Runner: {fileID: 5208232516891131547, guid: 4bd0cbd104212e042a000bdd2828e834, type: 3}
-  Jumper: {fileID: 9121534340414073874, guid: 6170d2b95ee2d364ca1acf731ced51c8, type: 3}
-  Flyer: {fileID: 8177748073100890610, guid: 36be3b0599446384eadd4d71e57b745a, type: 3}
-  BRunner: {fileID: 6532499675634064561, guid: 5aa20ca07dec9a049ac19a0ba8499f63, type: 3}
-  BJumper: {fileID: 8943087428303015360, guid: 5f7ff596b52e7d64a8a37a49495c679f, type: 3}
-  BFlyer: {fileID: 7396454800020120528, guid: d29d2a708143efd4c894f1c1d2f546f5, type: 3}
-  RunnerSpawnPoints:
-  - {fileID: 896074744}
-  - {fileID: 1766682740}
-  FlyerSpawnPoints:
-  - {fileID: 901896558}
-  - {fileID: 1464938502}
-  SpawnFinished: 0
---- !u!4 &1838815850
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1838815845}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.64120257, y: 1.5358182, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 901896559}
-  - {fileID: 896074745}
-  - {fileID: 1766682741}
-  - {fileID: 1464938503}
-  - {fileID: 1240060159}
-  m_Father: {fileID: 0}
-  m_RootOrder: 6
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1869219287
 GameObject:
   m_ObjectHideFlags: 0
@@ -2496,3 +2562,33 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &2146642478
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2146642479}
+  m_Layer: 0
+  m_Name: FlyerSpawnPoint (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 1206586993520771344, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2146642479
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2146642478}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 2.844, y: 0.11, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1024113387}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

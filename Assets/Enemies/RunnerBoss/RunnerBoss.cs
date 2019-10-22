@@ -32,12 +32,14 @@ public class RunnerBoss : MonoBehaviour
     {
         get { return _absorption; }
         set
-        {            
+        {
             _absorption = value;
             GetComponent<RunnerBossRideScript>().RideSet(value);
             if (value <= 0)
             {
                 _EnemyState._bosshealth--;
+                shake_time -= shake_time_change;
+
                 BossHealthState(_EnemyState._bosshealth);                
 
                 StopCoroutine(BossIdleAttack);
@@ -136,9 +138,14 @@ public class RunnerBoss : MonoBehaviour
         Debug.Log("RunnerBossMove");
         while (gameObject)
         {
-            yield return new WaitForSeconds(0.03f);
-            transform.Translate(new Vector2(-attackmovespeed, 0));
+            yield return new WaitForEndOfFrame();
+            transform.Translate(new Vector2(-attackmovespeed * Time.deltaTime * 30, 0));
         }
+    }
+
+    private void FixedUpdate()
+    {
+        
     }
 
     IEnumerator Shaker()
@@ -147,10 +154,10 @@ public class RunnerBoss : MonoBehaviour
 
         while (gameObject)
         {
-            yield return new WaitForSeconds(0.2f);
+            yield return new WaitForSeconds(0.1f);
             transform.Translate(-shake_intensity, 0, 0);
 
-            yield return new WaitForSeconds(0.2f);
+            yield return new WaitForSeconds(0.1f);
             transform.Translate(shake_intensity, 0, 0);
         }
     }
@@ -205,7 +212,6 @@ public class RunnerBoss : MonoBehaviour
         StopCoroutine(AtkMove);
         RBossAnimator.SetBool("RBoss_BossAttack", false);
 
-
         StartCoroutine(Shake);
         GetComponent<RunnerBossMinionSpawn>().MinionSpawn(transform.position.x);
 
@@ -238,6 +244,9 @@ public class RunnerBoss : MonoBehaviour
         if (collision.gameObject.tag == "Wall" && _EnemyState._attacking)
         {
             _wallishit = true;
+
+            GetComponent<RunnerBossMinionSpawn>().WallHitMinionSpawn(collision.name);
+
 
             if (GetComponent<EnemyState>()._facingleft)
                 GetComponent<EnemyState>()._facingleft = false;

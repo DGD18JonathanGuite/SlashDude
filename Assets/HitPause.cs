@@ -10,11 +10,13 @@ public class HitPause : MonoBehaviour
     private void OnEnable()
     {
         EventManager.EnemyisHit += Freeze;
+        //EventManager.PlayerIsHit += Freeze;
     }
 
     private void OnDisable()
     {
         EventManager.EnemyisHit -= Freeze;
+        //EventManager.PlayerIsHit -= Freeze;
     }
 
     void Freeze()

@@ -11,6 +11,7 @@ public class JumperBoss : MonoBehaviour
     public Vector2 HopDirection;
 
     IEnumerator _BossJump;
+    IEnumerator Shake;
 
     public bool BossJumpIsRunning = false;
 
@@ -18,9 +19,13 @@ public class JumperBoss : MonoBehaviour
     {
         Player = GameObject.Find("Player");
 
+        GetComponent<EnemyState>()._bosshealth = 4;
+
         _BossJump = BossJump();
 
         StartCoroutine(_BossJump);
+
+        Shake = Shaker();
     }
 
     private void Update()
@@ -43,7 +48,6 @@ public class JumperBoss : MonoBehaviour
             GetComponent<Rigidbody2D>().AddForce(new Vector2(forcex * -GetComponent<EnemyState>()._directionmodifier, forcey));
             StartCoroutine(DropPoison());
         }
-
     }
 
     IEnumerator DropPoison()
@@ -94,6 +98,16 @@ public class JumperBoss : MonoBehaviour
         }
     }
 
+    bool looking = false;
+    IEnumerator JumpRecovery()
+    {
+        looking = true;
+        yield return new WaitForSeconds(1f);
+        if (looking)
+            StartCoroutine(Hop());
+
+    }
+
     void HopDropOffWall()
     {
         GetComponent<Rigidbody2D>().velocity = Vector2.zero;
@@ -109,7 +123,6 @@ public class JumperBoss : MonoBehaviour
         GetComponent<Rigidbody2D>().AddForce(new Vector2((transform.position.x - col.transform.position.x) * 100, 0));        
     }
 
-
     void ResetandJumpAgain()
     {
         GetComponent<Rigidbody2D>().velocity = Vector2.zero;
@@ -117,18 +130,19 @@ public class JumperBoss : MonoBehaviour
         StartCoroutine(BossJump());
     }
 
-
     public bool _hopping = false;
     public bool _hoppingdamage = false;
 
     public int _hopnumber = 0;
-
 
     public void BossisHit()
     {
         if (_hopping)
             _hoppingdamage = false;
 
+        GetComponent<EnemyState>()._bosshealth--;
+        if (GetComponent<EnemyState>()._bosshealth <= 0)
+            BossDeath();
         StartCoroutine(StartHop());
     }
 
@@ -168,5 +182,57 @@ public class JumperBoss : MonoBehaviour
         }
         if (_hopping)
             _hoppingdamage = true;
+    }
+
+    public float shake_intensity = 0.05f;
+
+    IEnumerator Shaker()
+    {
+        transform.Translate(shake_intensity / 2, 0, 0);
+
+        while (gameObject)
+        {
+            yield return new WaitForSeconds(0.1f);
+            transform.Translate(-shake_intensity, 0, 0);
+
+            yield return new WaitForSeconds(0.1f);
+            transform.Translate(shake_intensity, 0, 0);
+        }
+    }
+
+    void BossDeath()
+    {
+        StartCoroutine(BDeath());
+    }
+
+    bool deathshake = false;
+    public ParticleSystem Damaged;
+
+    IEnumerator BDeath()
+    {
+        //StopCoroutine(AtkMove);
+        //StopCoroutine(BossIdleAttack);
+
+        StartCoroutine(Shake);
+        StartCoroutine(DeathShakeDuration());
+
+        yield return new WaitForEndOfFrame();
+
+        while (deathshake)
+        {
+            Instantiate(Damaged, transform.position, Quaternion.identity);
+            yield return new WaitForSeconds(0.01f);
+        }
+
+        StopCoroutine(Shake);
+        EventManager.EnemyisDead();
+        Destroy(gameObject);
+    }
+
+    IEnumerator DeathShakeDuration()
+    {
+        deathshake = true;
+        yield return new WaitForSeconds(2f);
+        deathshake = false;
     }
 }

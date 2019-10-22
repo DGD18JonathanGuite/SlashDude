@@ -38,7 +38,7 @@ public class EnemySpawn : MonoBehaviour
         if (_spawnnumber == 0)
             spawn = GetComponent<Level1ASpawn>().LvlSpawns;
         if (_spawnnumber == 1)
-            spawn = GetComponent<Level1ASpawn>().LvlSpawns;
+            spawn = GetComponent<Level2ASpawn>().LvlSpawns;
         if (_spawnnumber == 2)
             spawn = GetComponent<Level1ASpawn>().LvlSpawns;
 

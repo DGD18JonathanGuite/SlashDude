@@ -976,6 +976,7 @@ MonoBehaviour:
   speed: 0.5
   verticalmov: 0
   horizontalmov: 0
+  speedadjust: 100
   _isjumping: 0
   _isfalling: 0
 --- !u!114 &699266469
@@ -1391,34 +1392,118 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 787afce2170ad05438c3298224450dc3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawn1:
-  - timing: 0
-    Enemy: {fileID: 9121534340414073874, guid: 6170d2b95ee2d364ca1acf731ced51c8, type: 3}
-    SpawnPoint: {fileID: 477993584}
-  - timing: 0
-    Enemy: {fileID: 9121534340414073874, guid: 6170d2b95ee2d364ca1acf731ced51c8, type: 3}
-    SpawnPoint: {fileID: 477993584}
-  - timing: 0
-    Enemy: {fileID: 9121534340414073874, guid: 6170d2b95ee2d364ca1acf731ced51c8, type: 3}
-    SpawnPoint: {fileID: 477993584}
-  - timing: 0
-    Enemy: {fileID: 9121534340414073874, guid: 6170d2b95ee2d364ca1acf731ced51c8, type: 3}
-    SpawnPoint: {fileID: 477993584}
-  - timing: 0
-    Enemy: {fileID: 9121534340414073874, guid: 6170d2b95ee2d364ca1acf731ced51c8, type: 3}
-    SpawnPoint: {fileID: 477993584}
+  spawn1: []
   spawn2:
-  - timing: 0
+  - timing: 1
     Enemy: {fileID: 5208232516891131547, guid: 4bd0cbd104212e042a000bdd2828e834, type: 3}
     SpawnPoint: {fileID: 639403145}
-  spawn3:
-  - timing: 0
+  - timing: 0.5
     Enemy: {fileID: 5208232516891131547, guid: 4bd0cbd104212e042a000bdd2828e834, type: 3}
+    SpawnPoint: {fileID: 477993584}
+  - timing: 0.5
+    Enemy: {fileID: 5208232516891131547, guid: 4bd0cbd104212e042a000bdd2828e834, type: 3}
+    SpawnPoint: {fileID: 639403145}
+  - timing: 1
+    Enemy: {fileID: 9121534340414073874, guid: 6170d2b95ee2d364ca1acf731ced51c8, type: 3}
+    SpawnPoint: {fileID: 477993584}
+  - timing: 0.5
+    Enemy: {fileID: 9121534340414073874, guid: 6170d2b95ee2d364ca1acf731ced51c8, type: 3}
+    SpawnPoint: {fileID: 639403145}
+  - timing: 0.5
+    Enemy: {fileID: 5208232516891131547, guid: 4bd0cbd104212e042a000bdd2828e834, type: 3}
+    SpawnPoint: {fileID: 477993584}
+  - timing: 0.5
+    Enemy: {fileID: 9121534340414073874, guid: 6170d2b95ee2d364ca1acf731ced51c8, type: 3}
+    SpawnPoint: {fileID: 639403145}
+  - timing: 0.5
+    Enemy: {fileID: 9121534340414073874, guid: 6170d2b95ee2d364ca1acf731ced51c8, type: 3}
+    SpawnPoint: {fileID: 477993584}
+  - timing: 0.5
+    Enemy: {fileID: 5208232516891131547, guid: 4bd0cbd104212e042a000bdd2828e834, type: 3}
+    SpawnPoint: {fileID: 639403145}
+  - timing: 0.5
+    Enemy: {fileID: 9121534340414073874, guid: 6170d2b95ee2d364ca1acf731ced51c8, type: 3}
+    SpawnPoint: {fileID: 477993584}
+  spawn3:
+  - timing: 1
+    Enemy: {fileID: 9121534340414073874, guid: 6170d2b95ee2d364ca1acf731ced51c8, type: 3}
+    SpawnPoint: {fileID: 477993584}
+  - timing: 0.4
+    Enemy: {fileID: 9121534340414073874, guid: 6170d2b95ee2d364ca1acf731ced51c8, type: 3}
+    SpawnPoint: {fileID: 639403145}
+  - timing: 0.4
+    Enemy: {fileID: 9121534340414073874, guid: 6170d2b95ee2d364ca1acf731ced51c8, type: 3}
+    SpawnPoint: {fileID: 477993584}
+  - timing: 0.4
+    Enemy: {fileID: 9121534340414073874, guid: 6170d2b95ee2d364ca1acf731ced51c8, type: 3}
+    SpawnPoint: {fileID: 639403145}
+  - timing: 0.4
+    Enemy: {fileID: 9121534340414073874, guid: 6170d2b95ee2d364ca1acf731ced51c8, type: 3}
+    SpawnPoint: {fileID: 477993584}
+  - timing: 0.4
+    Enemy: {fileID: 9121534340414073874, guid: 6170d2b95ee2d364ca1acf731ced51c8, type: 3}
+    SpawnPoint: {fileID: 639403145}
+  - timing: 0.4
+    Enemy: {fileID: 9121534340414073874, guid: 6170d2b95ee2d364ca1acf731ced51c8, type: 3}
+    SpawnPoint: {fileID: 477993584}
+  - timing: 0.4
+    Enemy: {fileID: 9121534340414073874, guid: 6170d2b95ee2d364ca1acf731ced51c8, type: 3}
+    SpawnPoint: {fileID: 639403145}
+  - timing: 0.4
+    Enemy: {fileID: 9121534340414073874, guid: 6170d2b95ee2d364ca1acf731ced51c8, type: 3}
     SpawnPoint: {fileID: 477993584}
   - timing: 1
     Enemy: {fileID: 9121534340414073874, guid: 6170d2b95ee2d364ca1acf731ced51c8, type: 3}
     SpawnPoint: {fileID: 639403145}
-  spawnboss: []
+  - timing: 0.4
+    Enemy: {fileID: 9121534340414073874, guid: 6170d2b95ee2d364ca1acf731ced51c8, type: 3}
+    SpawnPoint: {fileID: 639403145}
+  - timing: 0.4
+    Enemy: {fileID: 9121534340414073874, guid: 6170d2b95ee2d364ca1acf731ced51c8, type: 3}
+    SpawnPoint: {fileID: 639403145}
+  - timing: 1
+    Enemy: {fileID: 5208232516891131547, guid: 4bd0cbd104212e042a000bdd2828e834, type: 3}
+    SpawnPoint: {fileID: 639403145}
+  - timing: 0.4
+    Enemy: {fileID: 9121534340414073874, guid: 6170d2b95ee2d364ca1acf731ced51c8, type: 3}
+    SpawnPoint: {fileID: 477993584}
+  - timing: 0.4
+    Enemy: {fileID: 5208232516891131547, guid: 4bd0cbd104212e042a000bdd2828e834, type: 3}
+    SpawnPoint: {fileID: 639403145}
+  - timing: 0.4
+    Enemy: {fileID: 9121534340414073874, guid: 6170d2b95ee2d364ca1acf731ced51c8, type: 3}
+    SpawnPoint: {fileID: 477993584}
+  - timing: 0.4
+    Enemy: {fileID: 9121534340414073874, guid: 6170d2b95ee2d364ca1acf731ced51c8, type: 3}
+    SpawnPoint: {fileID: 639403145}
+  - timing: 0.4
+    Enemy: {fileID: 5208232516891131547, guid: 4bd0cbd104212e042a000bdd2828e834, type: 3}
+    SpawnPoint: {fileID: 477993584}
+  - timing: 0.4
+    Enemy: {fileID: 5208232516891131547, guid: 4bd0cbd104212e042a000bdd2828e834, type: 3}
+    SpawnPoint: {fileID: 639403145}
+  - timing: 0.4
+    Enemy: {fileID: 9121534340414073874, guid: 6170d2b95ee2d364ca1acf731ced51c8, type: 3}
+    SpawnPoint: {fileID: 477993584}
+  - timing: 0.4
+    Enemy: {fileID: 9121534340414073874, guid: 6170d2b95ee2d364ca1acf731ced51c8, type: 3}
+    SpawnPoint: {fileID: 639403145}
+  - timing: 0.4
+    Enemy: {fileID: 5208232516891131547, guid: 4bd0cbd104212e042a000bdd2828e834, type: 3}
+    SpawnPoint: {fileID: 477993584}
+  - timing: 0.4
+    Enemy: {fileID: 9121534340414073874, guid: 6170d2b95ee2d364ca1acf731ced51c8, type: 3}
+    SpawnPoint: {fileID: 639403145}
+  - timing: 0.4
+    Enemy: {fileID: 9121534340414073874, guid: 6170d2b95ee2d364ca1acf731ced51c8, type: 3}
+    SpawnPoint: {fileID: 477993584}
+  - timing: 0.4
+    Enemy: {fileID: 9121534340414073874, guid: 6170d2b95ee2d364ca1acf731ced51c8, type: 3}
+    SpawnPoint: {fileID: 639403145}
+  spawnboss:
+  - timing: 1
+    Enemy: {fileID: 6532499675634064561, guid: 5aa20ca07dec9a049ac19a0ba8499f63, type: 3}
+    SpawnPoint: {fileID: 471638211}
 --- !u!114 &874975715
 MonoBehaviour:
   m_ObjectHideFlags: 0

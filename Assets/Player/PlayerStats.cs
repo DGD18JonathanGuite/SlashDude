@@ -115,29 +115,13 @@ public class PlayerStats
     {
         if (_instance == null)
         {
-            _instance = new PlayerStats(false, false, false, false, false, false, false, false , false, false, 0, 3);
+            _instance = new PlayerStats();
         }
         return _instance;
     }
 
-    public PlayerStats(bool dash, bool jump, bool explosion, bool poison, bool jumping, bool canattack, bool candash, bool ismoving, bool ischarging, bool stopping, float grav, int health)
+    public PlayerStats()
     {
-        _istakendash = dash;
-        _istakenjump = jump;
-        _istakenexplosion = explosion;
-        _istakenpoison = poison;
-
-        _jumping = jumping;
-        _canattack = canattack;
-        _candash = candash;
-
-        _ismoving = ismoving;
-        _ischarging = ischarging;
-
-        _isstopping = stopping;
-
-        _grav = grav;
-
-        _playerhealth = health;
+        _playerhealth = 3;
     }
 }

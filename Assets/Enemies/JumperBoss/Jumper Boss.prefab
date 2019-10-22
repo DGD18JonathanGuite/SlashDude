@@ -205,3 +205,8 @@ MonoBehaviour:
   forcey: 300
   HopDirection: {x: 0, y: 0}
   BossJumpIsRunning: 0
+  _hopping: 0
+  _hoppingdamage: 0
+  _hopnumber: 0
+  shake_intensity: 0.05
+  Damaged: {fileID: 7382999071350493372, guid: 44635637247881c4bbfc2aaa1e52f3f9, type: 3}

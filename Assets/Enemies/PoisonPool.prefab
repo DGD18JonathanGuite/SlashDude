@@ -162,3 +162,5 @@ MonoBehaviour:
   _fallingsize: {x: 1, y: 1}
   _flatsprite: {fileID: 10911, guid: 0000000000000000f000000000000000, type: 0}
   _fallingsprite: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
+  _playerisburning: 0
+  _poisonhealth: 1

@@ -467,14 +467,14 @@ MonoBehaviour:
     type: 3}
   ExplosionNode: {fileID: 6532499675925399962}
   Damaged: {fileID: 354533789806495552, guid: f6d200c49b64c224e80a0d0ce52ef76c, type: 3}
-  shake_intensity: 0.2
+  shake_intensity: 0.05
   shake_time: 2.5
-  shake_time_change: 0.6
+  shake_time_change: 0.5
   attack_stop_distance: 0.6
   _absorption: 1
   _absorption_damage: 0
-  attackmovespeed_original: 0.08
-  attackmovespeed: 0.08
+  attackmovespeed_original: 0.05
+  attackmovespeed: 0.05
 --- !u!114 &4590203867938946849
 MonoBehaviour:
   m_ObjectHideFlags: 0

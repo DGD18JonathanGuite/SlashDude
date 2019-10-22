@@ -13,13 +13,25 @@ public class InputManager : MonoBehaviour
 
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.A))
+        if(Input.GetKeyDown(KeyCode.A) /*&& !Input.GetKey(KeyCode.D)*/)
             EventManager.Movement(true);
-        if (Input.GetKeyDown(KeyCode.D))
+        if (Input.GetKeyDown(KeyCode.D) /*&& !Input.GetKey(KeyCode.A)*/)
             EventManager.Movement(false);
 
-        if ((Input.GetKeyUp(KeyCode.A) || (Input.GetKeyUp(KeyCode.D))) && ((!Input.GetKey(KeyCode.A) || (!Input.GetKey(KeyCode.D)))))
-            EventManager.Stop(1);
+        //if ((Input.GetKeyUp(KeyCode.A) || (Input.GetKeyUp(KeyCode.D))) && ((!Input.GetKey(KeyCode.A) || (!Input.GetKey(KeyCode.D)))))
+        //    EventManager.Stop(1);
+
+        if (Input.GetKeyUp(KeyCode.A) || Input.GetKeyUp(KeyCode.D))
+        {
+            if (Input.GetKey(KeyCode.A))
+                EventManager.Movement(true);
+            else if (Input.GetKey(KeyCode.D))
+                EventManager.Movement(false);
+            else
+                EventManager.Stop(1);
+        }
+
+
 
         //0 is dash
         //1 is jump

@@ -30,10 +30,20 @@ public class PlayerNormalMovement : MonoBehaviour
             StartCoroutine(StartMovement());
     }
 
+    bool _keepmoving = false;
+
+    private void FixedUpdate()
+    {
+        //if (_keepmoving)
+        //{
+        //    GetComponent<Rigidbody2D>().AddForce(new Vector2(GetComponent<PlayerMovement>().horizontalmov * 2, 0));
+        //}
+    }
+
     IEnumerator StartMovement()
     {
         PlayerStats.getInstance()._ismoving = true;
-        bool _keepmoving = true;
+        _keepmoving = true;
 
         yield return new WaitForSeconds(0.01f);
         
@@ -41,12 +51,14 @@ public class PlayerNormalMovement : MonoBehaviour
         {
             //Debug.Log("Moving at: " + GetComponent<PlayerMovement>().horizontalmov * 2);
 
-            if(PlayerStats.getInstance()._jumping)
-                GetComponent<Rigidbody2D>().AddForce(new Vector2(GetComponent<PlayerMovement>().horizontalmov *10, 0));
-            else
-                GetComponent<Rigidbody2D>().AddForce(new Vector2(GetComponent<PlayerMovement>().horizontalmov * 2, 0));
+            //if (PlayerStats.getInstance()._jumping)
+            //    GetComponent<Rigidbody2D>().AddForce(new Vector2(GetComponent<PlayerMovement>().horizontalmov * 10, 0));
+            //else
+            GetComponent<Rigidbody2D>().AddForce(new Vector2(GetComponent<PlayerMovement>().horizontalmov * GetComponent<PlayerMovement>().speedadjust * Time.deltaTime, 0));
+            //transform.position += new Vector3(GetComponent<PlayerMovement>().horizontalmov*Time.deltaTime, 0, 0);
 
-            yield return new WaitForSeconds(0.01f);
+            //  yield return new WaitForSeconds(0.01f);
+            yield return new WaitForEndOfFrame();
 
             if (GetComponent<PlayerMovement>().horizontalmov == 0 && PlayerStats.getInstance()._isstopping)
                 _keepmoving = false;
@@ -65,7 +77,6 @@ public class PlayerNormalMovement : MonoBehaviour
         //    condition = PlayerStats.getInstance()._isstopping;
 
        condition = PlayerStats.getInstance()._isstopping;
-
 
         while (!condition)
         {
@@ -91,6 +102,7 @@ public class PlayerNormalMovement : MonoBehaviour
     {
         //Debug.Log("Stop");
         PlayerStats.getInstance()._isstopping = true;
+
         EventManager.ChangePlayerSpriteAnimation(0);
 
         StartCoroutine(Stop());

@@ -6,6 +6,7 @@ public class PlayerMovement : MonoBehaviour
 {
     public float horizontalmax = 10, speed = 0;
     public float verticalmov = 0, horizontalmov = 0;
+    public float speedadjust = 100;
 
     public bool _isjumping;
     public bool _isfalling;

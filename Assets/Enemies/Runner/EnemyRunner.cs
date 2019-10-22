@@ -28,8 +28,9 @@ public class EnemyRunner : MonoBehaviour
         
         while (Vector2.Distance(transform.position, Player.transform.position) > 0.5f)
         {
-            transform.Translate(new Vector2((Player.transform.position.x - transform.position.x) * GetComponent<EnemyState>()._directionmodifier, 0).normalized/movespeeddamp);
-            yield return new WaitForSeconds(0.01f);
+            transform.Translate(new Vector2((Player.transform.position.x - transform.position.x) * GetComponent<EnemyState>()._directionmodifier, 0).normalized/ movespeeddamp * Time.deltaTime * 80);
+            yield return new WaitForEndOfFrame();
+            //yield return new WaitForSeconds(0.01f);
         }
         GetComponent<EnemyState>()._running = false;
         StartCoroutine(Attack());
@@ -45,12 +46,16 @@ public class EnemyRunner : MonoBehaviour
         GetComponent<EnemyRunnerSpriteManager>().EnemyAnimator.SetBool("RunnerhasSpotted", false);
 
         GetComponent<EnemyState>()._attacking = true;
-        for(int i = 0; i < 20; i++)
+        GetComponent<EnemyRunnerSpriteManager>().EnemyAnimator.SetBool("RunnerisAttacking", true);
+
+        for (int i = 0; i < 20; i++)
         {
             transform.Translate(attackmove * GetComponent<EnemyState>()._directionmodifier);
             yield return new WaitForSeconds(0.01f);
         }
         GetComponent<EnemyState>()._attacking = false;
+        GetComponent<EnemyRunnerSpriteManager>().EnemyAnimator.SetBool("RunnerisAttacking", false);
+
         yield return new WaitForSeconds(1f);
 
         if (Vector2.Distance(transform.position, Player.transform.position) > 0.5f)

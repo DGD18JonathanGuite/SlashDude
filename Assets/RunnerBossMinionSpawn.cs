@@ -22,6 +22,16 @@ public class RunnerBossMinionSpawn : MonoBehaviour
             Instantiate(RunnerEnemy, RunnerSpawnPoint1, Quaternion.identity);
     }
 
+    public void WallHitMinionSpawn(string wallname)
+    {
+        Debug.Log(wallname);
+
+        if (wallname == "LWall")
+            Instantiate(RunnerEnemy, RunnerSpawnPoint2, Quaternion.identity);
+        else
+            Instantiate(RunnerEnemy, RunnerSpawnPoint1, Quaternion.identity);
+    }
+
     //public void MinionSpawn(float bossposition)
     //{
     //    if (bossposition <= 0)

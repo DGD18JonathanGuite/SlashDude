@@ -13,8 +13,11 @@ public class PlayerAttack : MonoBehaviour
         {
             EventManager.EnemyisHit();
 
-            if(gameObject.tag == "Enemy" || gameObject.tag == "PoisonPool")
+            if(gameObject.tag == "Enemy")
             EnemyDeath();
+
+            if (gameObject.tag == "PoisonPool")
+                GetComponent<PoisonPoolScript>().PoisonDamaged();
 
             if(gameObject.tag == "Boss")
             {

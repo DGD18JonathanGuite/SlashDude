@@ -14,6 +14,25 @@ public class PoisonPoolScript : MonoBehaviour
 
     public bool _playerisburning = false;
 
+    int poisonhealth;
+    public int _poisonhealth
+    {
+        get
+        {
+            return poisonhealth;
+        }
+
+        set
+        {
+            if (value > poisonhealth)
+                transform.localScale += new Vector3(0.2f, 0.2f);
+            else if (value < poisonhealth)
+                transform.localScale -= new Vector3(0.2f, 0.2f);
+
+            poisonhealth = value;
+        }
+    }
+
     private void Start()
     {
         GetComponent<SpriteRenderer>().sprite = _fallingsprite;
@@ -50,5 +69,20 @@ public class PoisonPoolScript : MonoBehaviour
     private void OnDestroy()
     {
         GameObject.Find("Player").GetComponent<PlayerCollision>().CheckforStillBurns();
+    }
+
+    public void PoisonDamaged()
+    {
+        _poisonhealth--;
+        if(_poisonhealth <= 0)
+        {
+            GetComponent<PlayerAttack>().EnemyDeath();
+        }
+    }
+
+    public void PoisonCharged()
+    {
+        if(_poisonhealth < 4)
+        _poisonhealth++;
     }
 }
